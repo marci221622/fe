@@ -1,0 +1,22 @@
+version: '3'
+services:
+  myapp:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../src:/src
+      - ../yarn.lock:/yarn.lock
+      - ../package.json:/package.json
+      - ../razzle.config.js:/razzle.config.js
+      - ../razzle:/razzle
+      - ../babel.config.js:/babel.config.js
+      - ../public:/public
+      - ../tsconfig.json:/tsconfig.json
+      - ../.env:/.env
+      - ../.env.development:/.env.production
+      - node_modules:/node_modules
+volumes:
+  node_modules:

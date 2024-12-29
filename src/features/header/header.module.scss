@@ -1,0 +1,517 @@
+@import '@/ui/themes/config.scss';
+
+.shortLogin {
+	display: none;
+	@include caption();
+	text-decoration: underline;
+	font-size: 12px;
+	margin-right: 16px;
+}
+
+.cartLogo {
+	display: none;
+	flex: 1
+}
+
+.mobileStub {
+	display: block;
+
+	@include desktop() {
+		display: none;
+	}
+}
+
+.children {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	position: relative;
+
+	@include desktop() {
+		padding: 0 8px 0px 8px;
+	}
+}
+
+.header {
+	box-sizing: border-box;
+	margin-bottom: 8px;
+	position: sticky;
+	height: $mobleHeaderHeight;
+	justify-content: space-between;
+	transition: transform $defaultTransitionMs ease;
+
+	a {
+		position: relative;
+	}
+
+	@include desktop() {
+		height: $headerHeight;
+		margin-bottom: 45.5px;
+	}
+
+	&.isCartPage {
+
+		.logo,
+		.user {
+			display: none;
+
+			@include desktop() {
+				display: flex;
+			}
+		}
+
+		.shortLogin,
+		.cartLogo {
+			display: flex;
+			justify-content: center;
+
+			@include desktop() {
+				display: none;
+			}
+		}
+	}
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	svg {
+		width: 216px;
+
+		@include desktop() {
+			width: 250px;
+			height: 48px;
+		}
+	}
+}
+
+.gendersLink {
+	display: none;
+	align-items: center;
+	justify-content: center;
+	grid-column: span 3;
+	flex: 1;
+	transition: transform $defaultTransitionMs ease;
+
+	@include desktop() {
+		justify-content: flex-start;
+		align-items: flex-end;
+		grid-column: initial;
+		display: flex;
+	}
+
+	a {
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 150%;
+		text-align: center;
+		letter-spacing: 1.2px;
+		text-transform: uppercase;
+		color: $text-color-primary;
+		border-bottom: 2px solid transparent;
+		min-width: 98px;
+		padding: 13px 16px;
+		font-family: 'TSUM Lenta';
+
+		&.active {
+			border-color: $primary-color;
+		}
+
+		&:not(:last-child) {
+			margin-right: 17px;
+		}
+	}
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+	align-self: center;
+
+	@include desktop() {
+		visibility: visible;
+		align-items: flex-end;
+		justify-content: flex-start;
+		// Ширина поиска
+		max-width: calc(100% - 190px);
+	}
+
+	:global(.menu) {
+		display: flex;
+		margin: 17px 17px 0px 0px;
+
+		>li {
+			padding-bottom: 17.5px;
+			margin-bottom: -1px;
+
+			&:not(:last-child) {
+				padding-right: 32px;
+			}
+		}
+	}
+
+	a {
+		font-family: 'Geometria';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+		color: $text-color-primary;
+	}
+
+	&.isStucked {
+		ul {
+			li {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}
+
+.search {
+	font-family: 'Geometria';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+	color: $text-color-primary;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	gap: 11px;
+	grid-column: span 3;
+	transition: all $defaultTransitionMs ease;
+
+	input::placeholder {
+		color: $primary-color;
+	}
+
+	@include desktop() {
+		justify-content: flex-end;
+		align-items: center;
+		grid-column: initial;
+		display: flex;
+	}
+}
+
+.user {
+	display: flex;
+	gap: 16px;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 16px;
+
+	svg {
+		fill: $primary-color;
+	}
+
+	.userName {
+		max-width: 100px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	@include desktop() {
+		padding-right: 21px;
+	}
+}
+
+.mobile {
+	display: flex;
+	visibility: visible;
+
+	@include desktop() {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+.desktop {
+	display: none;
+	visibility: hidden;
+
+	@include desktop() {
+		display: flex;
+		visibility: visible;
+	}
+}
+
+.basketLink {
+	display: flex;
+	height: 100%;
+	width: 100%;
+}
+
+.counter {
+	top: -6px;
+	right: 12px;
+
+	&.favorite {
+		top: -8px;
+		right: 11px;
+	}
+}
+
+.modalWrapper {
+	overflow: hidden;
+}
+
+.additional,
+.compact {
+	background: #fff;
+	transition: transform $defaultTransitionMs ease;
+	width: 100%;
+	max-width: $max-width-desktop;
+	margin: 0 auto;
+}
+
+.compact {
+	display: flex;
+	justify-content: space-between;
+	height: $mobleHeaderHeight;
+	z-index: 2;
+	align-items: center;
+	position: relative;
+
+	.mobileStub {
+		padding-left: 19px;
+		visibility: hidden;
+	}
+
+	.mobileStub,
+	.shortLogin,
+	.user {
+		flex: 0.3
+	}
+
+	@include desktop() {
+		height: $compactHeaderHeight;
+
+		.mobileStub,
+		.user {
+			flex: 2
+		}
+
+	}
+}
+
+.additional {
+	display: flex;
+	justify-content: space-between;
+	z-index: 1;
+}
+
+.leftSide {
+	flex: 2;
+	position: relative;
+	overflow: hidden;
+	display: none;
+
+	@include desktop() {
+		display: block
+	}
+}
+
+.dynamicTitle {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	transform: translateY($compactHeaderHeight);
+	transition: transform $defaultTransitionMs ease;
+	padding-left: 14px;
+	text-transform: uppercase;
+
+	p {
+		@include title();
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	img {
+		max-width: 180px;
+		max-height: 44px;
+	}
+}
+
+.stucked {
+	&.header {
+		transform: translateY(-$headerHeight + $compactHeaderHeight);
+	}
+
+	.compact {
+		transform: translateY($headerHeight - $compactHeaderHeight);
+	}
+
+	&.hasTitle {
+		.gendersLink {
+			transform: translateY(-$compactHeaderHeight);
+		}
+
+		.dynamicTitle {
+			transform: translateY(0);
+		}
+	}
+}
+
+.overlay {
+	display: none;
+	background: $primary-color;
+	cursor: pointer;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	transition: opacity .3s 0s;
+	visibility: hidden;
+	width: 100%;
+	will-change: opacity;
+	z-index: -1;
+
+	@include desktop() {
+		display: block;
+	}
+}
+
+.border {
+	display: none;
+
+	@include desktop() {
+		display: block;
+		margin-top: 1px;
+		width: 100%;
+		max-width: $max-width-desktop;
+		margin: 0 auto;
+		height: 1px;
+		background-color: $services-gray;
+	}
+}
+
+.searchOpened {
+	.border {
+		visibility: hidden;
+	}
+
+	.search {
+		flex-basis: 100%;
+
+		input {
+			box-shadow: inset 0px -1px 0px $higlight-color;
+			height: 60px;
+			color: $primary-color;
+		}
+
+		div,
+		input {
+			max-width: none;
+			width: 100%;
+		}
+	}
+
+	.overlay {
+		visibility: visible;
+		opacity: 0.76;
+		transition: opacity $defaultTransitionMs ease;
+	}
+
+	.nav {
+		opacity: 0;
+		visibility: hidden;
+		display: none;
+	}
+}
+
+.profile {
+	position: relative;
+}
+
+.username {
+	cursor: pointer;
+}
+
+.userPopup {
+	position: relative;
+	background: #fff;
+
+	&:hover {
+		.inner {
+			display: flex;
+		}
+	}
+}
+
+.mobile {
+	display: flex;
+
+	@include desktop() {
+		display: none;
+	}
+}
+
+.desktop {
+	display: none;
+
+	@include desktop() {
+		display: flex;
+	}
+}
+
+.searchModalHeader {
+	margin-top: 12px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+	height: $mobleHeaderHeight;
+
+	svg {
+		width: 24px;
+		color: $secondary-neutral-color60;
+		opacity: 1;
+	}
+
+	.input {
+		flex: 1 1 auto;
+		width: auto;
+	}
+
+	input {
+		color: $secondary-neutral-color60;
+
+		&::placeholder {
+			color: $secondary-neutral-color60;
+		}
+	}
+
+	&.searchActive {
+		svg {
+			color: $primary-color
+		}
+
+		input {
+			color: $primary-color;
+
+			&::placeholder {
+				color: $primary-color;
+			}
+		}
+	}
+}

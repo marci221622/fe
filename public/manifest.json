@@ -1,0 +1,15 @@
+{
+  "short_name": "TSUM Collect",
+  "name": "TSUM Collect",
+  "icons": [
+    {
+      "src": "android-chrome-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/catalog?utm_source=pwaStandaloneApp",
+  "display": "standalone",
+  "theme_color": "#1B1B1B",
+  "background_color": "#fff"
+}

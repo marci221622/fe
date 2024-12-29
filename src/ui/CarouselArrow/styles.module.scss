@@ -1,0 +1,47 @@
+@import "@/ui/themes/config.scss";
+
+$arrow-size: 32px;
+
+.wrapper {
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	width: $arrow-size;
+	height: $arrow-size;
+	top: 50%;
+	left: 0px;
+	z-index: $z-minor;
+	cursor: pointer;
+	display: none;
+	transform: translateY(-50%);
+
+	&:global(.swiper-button-disabled) {
+		svg {
+			opacity: 0.5;
+			cursor: not-allowed
+		}
+	}
+
+	svg {
+		width: $arrow-size;
+		height: $arrow-size;
+	}
+
+	@include desktop {
+		display: flex;
+	}
+
+	&.right {
+		left: auto;
+		right: 0px;
+	}
+
+	&.hidden {
+		visibility: hidden
+	}
+
+	&.large {
+		width: $carouselArrowSize;
+		height: $carouselArrowSize;
+	}
+}

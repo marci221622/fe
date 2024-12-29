@@ -1,0 +1,130 @@
+@import '@/ui/themes/config.scss';
+
+.header {
+	justify-content: center;
+	position: relative;
+	align-items: center;
+	margin-bottom: 16px;
+
+	h1 {
+		display: flex;
+		flex-direction: column;
+		
+		@include desktop() {
+			gap: 10px;
+		}
+	}
+
+	svg {
+		transform: rotate(180deg);
+		position: absolute;
+		left: 0px;
+		display: block;
+		cursor: pointer;
+
+		@include desktop() {
+			top: 0px;
+		}
+	}
+
+	.description {
+		@include caption();
+		text-transform: none;
+		font-weight: 400;
+		font-size: 12px;
+	}
+}
+
+.list {
+	grid-area: itemsList;
+}
+
+.emptyText {
+	grid-area: emptyText;
+}
+
+.wrapper {
+	margin-bottom: 20px;
+}
+
+.summary {
+	grid-area: summary;
+	display: none;
+
+	@include desktop() {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: sticky;
+		top: 0;
+		gap: 100px;
+	}
+
+	.form {
+		position: sticky;
+		transition: all $defaultTransitionMs ease;
+		display: flex;
+		gap: 12px;
+		flex-direction: column;
+		background-color: #fff;
+		align-items: center;
+
+		&.active {
+			z-index: 2;
+		}
+
+		@include desktop() {
+			gap: 16px;
+		}
+
+		&.stucked {
+			padding-top: 28px
+		}
+	}
+}
+
+.content {
+	display: grid;
+	gap: 16px 32px;
+	grid-template-areas:
+		"itemsList summary";
+	grid-template-columns: 1fr;
+
+	@include desktop() {
+		grid-template-areas:
+			"itemsList summary";
+		grid-template-columns: 1fr 384px;
+	}
+}
+
+.mobile {
+	&.content {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.tabs {
+		position: sticky;
+		top: $mobileNavHeight;
+		z-index: $z-minor;
+	}
+}
+
+.pageTitle {
+	@include caption();
+	font-size: 14px;
+	text-transform: none;
+	margin-bottom: 0px;
+	font-weight: 500;
+
+	@include desktop() {
+		@include title();
+		text-transform: uppercase;
+		font-size: 17px;
+	}
+}
+
+.descriptionText {
+	white-space: pre-wrap;
+}

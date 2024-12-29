@@ -1,0 +1,144 @@
+@import '@/ui/themes/config.scss';
+
+.header {
+	position: relative;
+	height: 56px;
+	padding-top: 16px;
+
+	&>p {
+		max-width: 70%;
+		margin: 0 auto;
+		overflow: hidden;
+		font-family: 'TSUM Lenta';
+		font-size: 17px;
+		line-height: 28px;
+		letter-spacing: 1.36px;
+		text-align: center;
+		color: $text-color-primary;
+		text-transform: uppercase;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&.withReset>p {
+		max-width: 49%;
+	}
+}
+
+.back,
+.close {
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 22px;
+	cursor: pointer;
+}
+
+.back {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.reset {
+	position: absolute;
+	top: 22px;
+	left: auto;
+	right: 16px;
+	padding: 0;
+	font-size: 13px;
+	line-height: normal;
+	color: $text-color-primary;
+	background-color: transparent;
+}
+
+.tilte {
+	cursor: pointer;
+}
+
+.categories {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+	grid-auto-rows: max-content;
+	grid-gap: 16px;
+	width: 100%;
+	max-height: 80vh;
+	padding: 0 18px;
+	margin: 0 auto auto;
+	overflow-y: auto;
+
+	@include desktop() {
+		max-height: 312px;
+	}
+}
+
+.category {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	flex-direction: column;
+	gap: 8px;
+	object-fit: contain;
+	border-radius: 7px;
+	border: 1px solid transparent;
+	overflow: hidden;
+
+	&.active {
+		border-color: $secondary-color;
+	}
+
+	img {
+		width: 80px;
+		height: 80px;
+		object-fit: contain;
+	}
+
+	p {
+		padding-top: 4px;
+		font-size: 13px;
+		line-height: normal;
+		letter-spacing: normal;
+		pointer-events: none;
+		text-align: center;
+		overflow-wrap: anywhere;
+
+		@include desktop() {
+			pointer-events: auto;
+		}
+	}
+
+	&:hover {
+		p {
+			color: $secondary-color;
+		}
+	}
+}
+
+.footer {
+	padding: 16px;
+	position: sticky;
+	bottom: 0;
+	background-color: #fff;
+}
+
+.counterButton {
+	height: 50px;
+	font-size: 15px;
+}
+
+.stub {
+	height: 200px;
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 80vh;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+.tagsList {
+	display: flex;
+}

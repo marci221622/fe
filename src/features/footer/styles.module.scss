@@ -1,0 +1,189 @@
+@import '@/ui/themes/config.scss';
+
+.footer {
+	color: #fff;
+	box-sizing: border-box;
+	padding: 16px;
+	padding-bottom: 56.5px;
+	padding: 18px 16px;
+	background-color: $primary-color;
+
+	a {
+		color: #fff;
+	}
+
+	button {
+		padding: 0;
+		color: #fff;
+	}
+
+	@include desktop() {
+		flex-direction: row;
+	}
+
+	.footerPanel {
+		box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.04);
+
+		&:last-child {
+			box-shadow: none;
+		}
+
+		&.opened {
+			box-shadow: none;
+		}
+	}
+
+	.devider {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.chevron {
+		transition: 0.3s;
+		fill: #ffffff;
+	}
+}
+
+.title {
+	@include title();
+	font-family: 'TSUM Lenta';
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 150%;
+	text-transform: uppercase;
+	margin-bottom: 18px;
+	color: #fff;
+
+	&.activeTitle {
+		font-weight: 400 !important;
+	}
+}
+
+.info {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		@include caption();
+		font-size: 13px;
+		margin-bottom: 20px;
+		color: #fff;
+	}
+}
+
+.infoWrapper {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	margin-top: 22px;
+
+	@include desktop() {
+		flex-direction: row;
+		margin-top: 0;
+		gap: 24px;
+	}
+
+	p,
+	.p {
+		@include caption();
+		font-size: 13px;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		justify-content: center;
+		color: #fff;
+
+		&:not(.company) {
+			margin-bottom: 20px;
+		}
+
+		@include desktop() {
+			margin-bottom: 0;
+			justify-content: flex-start;
+		}
+	}
+}
+
+.socials {
+	p {
+		margin-bottom: 28px;
+		text-align: center;
+		display: none;
+
+		@include desktop() {
+			display: block;
+			text-align: left;
+		}
+	}
+
+	.qrCode {
+		path:last-child {
+			fill: $primary-color;
+		}
+	}
+
+	.appsWithQr {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.title {
+		text-align: center;
+		margin-top: 32px;
+
+		@include desktop() {
+			margin-top: 0;
+			text-align: left;
+		}
+	}
+}
+
+.appLinks {
+	gap: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	flex-direction: row;
+
+	@include desktop() {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+	}
+}
+
+.telegram {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	@include desktop() {
+		flex-direction: row;
+		gap: 24px;
+	}
+}
+
+.row2 {
+	margin-top: 22px;
+
+	@include desktop() {
+		margin-top: 50px;
+	}
+}
+
+.company {
+	order: 10;
+
+	@include desktop() {
+		order: 0;
+	}
+}

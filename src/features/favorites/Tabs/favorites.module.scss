@@ -1,0 +1,27 @@
+@import '@/ui/themes/config.scss';
+
+.filters {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+	z-index: $z-minor;
+	margin-bottom: 16px;
+	padding-bottom: 6px;
+	background-color: #fff;
+	transition: top $defaultTransitionMs ease;
+
+	@include desktop() {
+		margin-bottom: 0px;
+	}
+
+  &.mobile {
+		top: $mobleHeaderHeight;
+		position: sticky;
+	}
+}
+
+.segments {
+    width: 100%;
+
+}

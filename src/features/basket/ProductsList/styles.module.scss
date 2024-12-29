@@ -1,0 +1,178 @@
+@import '@/ui/themes/config.scss';
+
+.list {
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  @include desktop() {
+    margin-bottom: 0px;
+    gap: 16px;
+    padding: 0 8px;
+  }
+
+  li {
+    display: flex;
+    gap: 8px;
+    border-radius: 17px;
+    border: 1px solid $services-gray;
+    padding: 8px 16px;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+
+    @include desktop() {
+      padding-left: 28px;
+      min-height: 177px;
+    }
+
+    .productImage {
+      width: 70px;
+      height: 110px;
+      object-fit: contain;
+
+      @include desktop() {
+        width: 138px;
+        height: 212px;
+      }
+    }
+  }
+
+  .CloseIcon,
+  .starIcon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+
+    @include desktop() {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  .starIcon {
+    right: 48.5px;
+    top: 16px;
+
+    @include desktop() {
+      top: 15px;
+      right: 56px;
+    }
+  }
+}
+
+.brandLogo {
+  width: auto;
+  max-height: 32px;
+  margin-top: 8px;
+
+  @include desktop() {
+    max-width: 320px;
+  }
+}
+
+.space {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center !important;
+
+  @include desktop() {
+    justify-content: flex-start;
+    align-items: flex-start !important;
+    margin-left: 20px;
+  }
+}
+
+.checkbox {
+  position: absolute;
+  top: 53px;
+  z-index: 2;
+
+  &.notExisted {
+    visibility: hidden;
+  }
+
+  @include desktop() {
+    position: relative;
+    top: auto;
+  }
+}
+
+.price {
+  align-self: center;
+  font-size: 12px;
+
+  [data-discount] {
+    align-self: flex-end;
+  }
+
+  @include desktop() {
+    align-self: flex-end;
+    font-size: 14px;
+  }
+}
+
+.priceSpace {
+  position: absolute;
+  right: 16px;
+  top: 53px;
+
+  @include desktop() {
+    align-self: flex-start;
+    margin-top: 35px;
+    position: relative;
+    top: auto;
+    right: auto;
+  }
+}
+
+.labels {
+  margin-bottom: 0px;
+}
+
+.title {
+  font-size: 12px;
+  text-align: center;
+
+  @include desktop() {
+    font-size: 14px;
+    text-align: left;
+  }
+}
+
+.descriptionDeisclamer {
+  display: none;
+
+  @include desktop() {
+    display: flex;
+    margin-top: 18px;
+
+    span {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.similarAction {
+  margin-top: 8px;
+
+  @include desktop() {
+    margin-top: 16px;
+  }
+}
+
+.notAvailableToClickDisclamer {
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  p {
+    font-size: 13px;
+    min-height: 24px;
+  }
+}

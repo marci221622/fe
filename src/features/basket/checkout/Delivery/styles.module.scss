@@ -1,0 +1,108 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+  display: none;
+  flex: 1 1 auto;
+  position: relative;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 2;
+  align-items: center;
+  @include mobileNegativeMargin();
+
+  &.active {
+    z-index: 4;
+  }
+
+  &.hasDates {
+    display: flex;
+  }
+
+  @include desktop() {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+}
+
+.deliviries {
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 16px;
+  gap: 8px;
+  align-self: flex-start;
+
+  &.desktop {
+    gap: 24px;
+    padding: 0px 16px;
+  }
+}
+
+.dates {
+  display: none;
+  gap: 8px;
+  max-width: 100%;
+  @include hide-scroll();
+  @include templatePaddings(true);
+  overflow: auto;
+  touch-action: auto !important;
+
+  &.hasDates {
+    display: flex;
+  }
+
+  li {
+    @include caption('small');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 6px;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 6px 8px;
+    min-width: 64px;
+    max-height: 62px;
+    text-align: center;
+    flex: 0 0 auto;
+
+    &.active {
+      border-width: 2px;
+    }
+
+    @include desktop() {
+      flex: none;
+    }
+  }
+}
+
+.desktop {
+  .dates {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.description {
+  @include caption();
+  font-size: 12px;
+  text-align: center;
+  padding: 17px 32px;
+  border: 1px solid $higlight-color;
+  border-radius: 6px;
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.deliveryDisclamerStub {
+  @include desktop() {
+    height: 104px;
+  }
+}
+
+.deliveryDescriptionText {
+  white-space: pre-wrap;
+}

@@ -1,0 +1,87 @@
+@import '@/ui/themes/config.scss';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+
+  li {
+    display: flex;
+    align-items: center;
+
+    .wrapper {
+      @include caption();
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      font-weight: 500;
+      font-size: 14px;
+      margin-left: 21px;
+      flex: 1;
+      padding: 8px 16px 8px 0px;
+      flex-direction: column;
+
+      &.oneline {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        height: 56px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .subtitle {
+        @include caption();
+        font-weight: 400;
+        font-size: 13px;
+      }
+    }
+
+    span:not(.subtitle) {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:not(:last-child) {
+      .wrapper {
+        box-shadow: inset 0px -1px 0px $higlight-color;
+
+        @include desktop() {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  &.small {
+    li .wrapper {
+      font-size: 13px;
+      font-weight: normal;
+    }
+  }
+
+  .action {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+  }
+
+  .moreAction {
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 5px;
+
+    @include desktop() {
+      margin-left: 0px;
+    }
+  }
+
+  .titlesWrapper {
+    display: block;
+  }
+}

@@ -1,0 +1,86 @@
+@import '@/ui/themes/config.scss';
+
+.partnerBanner {
+  width: 100%;
+  position: relative;
+  margin-bottom: 16px;
+
+  @include desktop() {
+    padding: 8px 16px;
+    margin-bottom: 32px;
+  }
+}
+
+.profSellerBanner {
+  max-width: 100%;
+  height: 442px;
+  background-size: cover;
+  background-image: url('./mobileBanner.png');
+
+  @include desktop() {
+    width: 1168px;
+    height: 450px;
+    background-size: cover;
+    background-image: url('./banner.png');
+    background-position: bottom;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 188px;
+  left: 0;
+  width: 100%;
+
+  @include desktop() {
+    top: 100px;
+    margin-left: 56px;
+  }
+}
+
+.title {
+  @include title();
+  color: #ffffff;
+  padding: 0 16px;
+  margin-bottom: 16px;
+  font-size: 25px;
+  text-align: center;
+
+  @include desktop() {
+    top: 100px;
+    left: 56px;
+    font-size: 27px;
+    text-align: left;
+    margin-bottom: 32px;
+  }
+}
+
+.description {
+  @include caption(small);
+  color: #ffffff;
+  padding: 0 16px;
+  margin-bottom: 32px;
+  text-align: center;
+
+  @include desktop() {
+    width: 446px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 64px;
+  }
+}
+
+.button {
+  background: #ffffff;
+  color: #1b1b1b;
+  margin: 0 auto;
+
+  @include desktop() {
+    margin: 0;
+    width: 284px;
+  }
+
+  width: 268px;
+}

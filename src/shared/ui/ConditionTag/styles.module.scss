@@ -1,0 +1,22 @@
+@import "@/ui/themes/config.scss";
+
+.tag {
+	@include caption();
+	display: flex;
+	visibility: hidden;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	padding: 2px 4px;
+	border: 1px solid $primary-color;
+	border-radius: 3px;
+	font-weight: 500;
+	font-size: 8px;
+	line-height: 10px;
+	text-transform: uppercase;
+	margin-top: 6px;
+
+	&.hasTag {
+		visibility: visible;
+	}
+}

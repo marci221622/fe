@@ -1,0 +1,50 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+	min-height: $headerInstallBannerHeight;
+	background-color: $higlight-color;
+	color: $text-color-primary;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: all $defaultTransitionMs ease;
+	padding: 8px 16px;
+
+	@include desktop() {
+		display: none;
+	}
+
+	.content {
+		display: flex;
+		column-gap: 16px;
+		align-items: center;
+		font-size: 12px;
+		width: 100%;
+	}
+
+	p {
+		@include caption(small);
+		flex: 1;
+		font-size: 12px;
+		padding-right: 14px;
+	}
+
+	.btn_download {
+		@include caption(minimal);
+		display: flex;
+		border: 1px solid $primary-color;
+		border-radius: 3px;
+		padding: 0px 8px;
+		justify-content: center;
+		align-items: center;
+		width: 64px;
+		height: 26px;
+		margin-left: auto;
+		margin-right: 16px;
+	}
+
+	.btn_close {
+		min-width: 20px;
+		min-height: 20px;
+	}
+}

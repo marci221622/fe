@@ -1,0 +1,40 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+  min-height: $headerStickyBannerHeigth;
+  background-color: $primary-color;
+  color: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: all $defaultTransitionMs ease;
+
+  padding: 8px 32px;
+
+  &.isLoyalty {
+    background-color: $secondary-color;
+  }
+
+  @include desktop() {
+    padding: 14px 16px;
+  }
+
+  &.visible {
+    display: flex;
+  }
+
+  .loyaltyWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
+
+  p,
+  .loyaltyWrapper {
+    @include caption(small);
+    color: #fff;
+
+    text-align: center;
+  }
+}

@@ -1,0 +1,115 @@
+@import '@/ui/themes/config.scss';
+
+
+.modalHeader {
+	@include desktop() {
+		height: $compactHeaderHeight;
+	}
+}
+
+.modalBody {
+	max-height: calc(100% - 40px);
+
+	@include desktop() {
+		max-height: calc(100% - $compactHeaderHeight);
+		overflow: hidden;
+	}
+}
+
+.modalContentWrapper {
+	padding: 0px;
+	height: 100%;
+
+	@include desktop() {
+		padding: 0px 36px;
+		padding-top: 16px;
+	}
+
+	:global(.swiper-zoom-container) {
+		display: flex;
+		width: inherit;
+		justify-content: center;
+	}
+
+	:global(.swiper) {
+		height: 100%;
+	}
+
+	:global(.swiper-wrapper) {
+		height: 100%
+	}
+
+	:global(.swiper-slide) {
+		display: flex;
+		justify-content: center;
+	}
+
+	:global(.swiper-pagination) {
+		order: 2;
+		bottom: 0px !important;
+
+		:global(.swiper-pagination-bullet-active) {
+			opacity: 1 !important;
+		}
+
+		:global(.swiper-pagination-bullet) {
+			background: #444;
+			opacity: .47;
+			width: 6px;
+			height: 6px;
+		}
+	}
+
+	img {
+		object-fit: contain;
+		max-width: 100%;
+		max-height: calc(100% - 20px);
+
+		@include desktop() {
+			max-height: calc(100vh - 100px - $compactHeaderHeight);
+			height: 100%;
+		}
+	}
+}
+
+.actions {
+	margin-top: 0px;
+	padding: 16px;
+}
+
+.advantages {
+	margin-top: 0px;
+
+	@include desktop() {
+		margin-top: 66px;
+	}
+}
+
+.widgets {
+	:global(.widget) {
+		&:first-child {
+			margin-top: 28px;
+
+			@include desktop() {
+				margin-top: 66px;
+			}
+		}
+	}
+}
+
+.responsive {
+	height: 100%;
+}
+
+.hiddenTitle {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}

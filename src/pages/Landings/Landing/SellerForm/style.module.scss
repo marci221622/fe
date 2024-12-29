@@ -1,0 +1,73 @@
+@import "@/ui/themes/config.scss";
+
+
+.sellerFormDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+.sellerForm {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 26px;
+
+  @include desktop() {
+    margin-bottom: 6px;
+  }
+}
+
+.input {
+  margin-bottom: 16px;
+  color: $text-color-primary;
+
+  &.errorField input::placeholder {
+    color: $error-color;
+  }
+
+  input {
+    width: 100%;
+    letter-spacing: 0;
+  }
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop() {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.sellerForm fieldset {
+  padding: 0.35em 0.75em 0;
+  margin-bottom: 0.65em;
+  background-color: #fff;
+  border: 1px solid #fcfbfd;
+  border-radius: 16px;
+}
+
+.sellerFormSubmit {
+  width: 100%;
+  padding: 17.5px 20px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1;
+
+  @include desktop() {
+    width: 95%;
+  }
+
+  &:disabled {
+    opacity: 0.24;
+  }
+}

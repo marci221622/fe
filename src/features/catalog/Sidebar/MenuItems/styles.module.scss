@@ -1,0 +1,92 @@
+@import '@/ui/themes/config';
+
+.sidebar {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 284px;
+
+  &.dropdown {
+    padding-top: 0px;
+
+    .title {
+      background-color: $extrahighlight-color;
+      border-radius: 20px;
+    }
+  }
+
+  .title {
+    font-family: 'TSUM Lenta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0px 16px 0px 16px;
+    text-overflow: ellipsis;
+
+    a {
+      @include title();
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 6px;
+      font-size: 12px;
+      text-transform: uppercase;
+      height: 48px;
+
+      span {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        flex: 1;
+      }
+    }
+
+    &.selected {
+      padding: 0px;
+    }
+
+    a:hover {
+      color: $secondary-color !important;
+    }
+  }
+
+  &.inner {
+    .title {
+      a {
+        @include caption();
+        font-size: 13px;
+        display: flex;
+        text-transform: none;
+        padding: 0 16px;
+        color: $text-color-primary;
+      }
+
+      &.selected {
+        padding: 0px 16px 0px 16px;
+
+        a {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.mainTitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 16px;
+}

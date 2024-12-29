@@ -1,0 +1,92 @@
+@import '@/ui/themes/config.scss';
+
+.verificationContainer {
+	padding: 16px;
+	border-radius: 16px;
+	border: 1px solid $higlight-color;
+	height: auto;
+	width: auto;
+	margin-bottom: 16px;
+	gap: 16px;
+
+	.character {
+		@include caption();
+		border: none;
+		font-size: 14px;
+		border-radius: 7px;
+		color: rgba(29, 46, 55, 0.6);
+		background-color: $higlight-color;
+		box-shadow: inset 0px 1px 2px #E2DFEA;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 46px;
+		width: 46px;
+	}
+}
+
+.error {
+	color: $error-color !important;
+	font-weight: 400;
+	visibility: hidden;
+
+	&.hasError {
+		visibility: visible;
+	}
+}
+
+.space {
+	gap: 0 !important;
+	height: 100%;
+	align-items: center !important;
+	position: relative;
+
+	.field {
+		max-width: none;
+		margin-bottom: 8px;
+	}
+
+	p {
+		@include caption();
+		font-size: 12px;
+		margin-bottom: 16px;
+	}
+
+	button {
+		margin-bottom: 16px;
+
+		&.applyPhone {
+			margin-top: auto;
+		}
+	}
+}
+
+.title {
+	@include title();
+
+	&.directFlow {
+		@include caption();
+		font-size: 12px;
+		font-weight: 500;
+		margin-bottom: 6px;
+	}
+}
+
+.failedMessage {
+	color: $error-color !important
+}
+
+.subtitle {
+	max-width: 300px;
+}
+
+.overlay {
+	input {
+		opacity: 0;
+	}
+}
+
+.appLink {
+	text-decoration: underline;
+	color: $secondary-color;
+}

@@ -1,0 +1,127 @@
+@use "sass:map";
+
+// js ui breakpoints
+$breakpoints: (
+  xxs: 352px,
+  xs: 600px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1184px,
+  xl: 1440px
+);
+
+@function breakpoint-max($key) {
+  $max: map.get($breakpoints, $key);
+
+  @return $max - 0.2;
+}
+
+@mixin media-breakpoint-up($key, $offset: 0) {
+  @media (min-width: (map.get($breakpoints, $key) + $offset)) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($key) {
+  $max: breakpoint-max($key);
+
+  @media (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin media-screen-up($size: 0px) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($start, $end) {
+  @include media-breakpoint-up($start) {
+    @include media-breakpoint-down($end) {
+      @content;
+    }
+  }
+}
+
+@mixin mobile() {
+  @include media-breakpoint-down(xs) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @include media-breakpoint-up(xs) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @include media-breakpoint-up(md) {
+    @content;
+  }
+}
+
+@mixin retina() {
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2 / 1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin templatePaddings($onlyMinimal: false) {
+  @include desktop() {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @if $onlyMinimal ==false {
+    @include media-breakpoint-down(lg) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  @else {
+    @include media-breakpoint-down(lg) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@mixin mobileNegativeMargin($onlyMinimal: false) {
+  @include desktop() {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  @if $onlyMinimal==false {
+    @include media-breakpoint-down(lg) {
+      margin-right: -20px;
+      margin-left: -20px;
+    }
+  }
+
+  @else {
+    @include media-breakpoint-down(lg) {
+      margin-right: -16px;
+      margin-left: -16px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+}

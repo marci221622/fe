@@ -1,0 +1,46 @@
+@import '@/ui/themes/config.scss';
+
+.TagWrapper {
+	display: flex;
+	align-items: center;
+	height: 32px;
+	padding: 0 8px;
+	border: 0.5px solid $primary-color;
+	border-radius: 6px;
+	color: $text-color-primary;
+	background-color: #fff;
+	cursor: pointer;
+
+	&.active {
+		color: #fff;
+		background-color: $primary-color;
+	}
+}
+
+.text {
+	height: 12px;
+	white-space: nowrap;
+	@include caption();
+	color: currentColor;
+	line-height: unset;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.sortFilterIcon {
+	width: 20px;
+	height: 20px;
+
+	@include desktop() {
+		margin-right: 8px;
+	}
+}
+
+
+.sortText {
+	display: none;
+
+	@include desktop() {
+		display: block;
+	}
+}

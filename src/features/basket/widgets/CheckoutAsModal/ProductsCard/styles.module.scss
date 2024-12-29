@@ -1,0 +1,78 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+	border: 1px solid $services-gray;
+	border-radius: 16px;
+	padding: 16px;
+	padding-top: 20px;
+	padding-bottom: 8px;
+	display: flex;
+	flex-direction: column;
+	min-width: 100%;
+	position: relative;
+	background-color: #fff;
+	max-width: 100%;
+	overflow-x: auto
+}
+
+.title {
+	@include caption();
+	font-weight: bold;
+	font-size: 14px;
+	align-self: flex-start;
+	margin-bottom: 12px;
+}
+
+.info {
+	margin-left: 22px;
+}
+
+.products {
+	display: flex;
+	@include hide-scroll();
+	flex-wrap: nowrap;
+	overflow: auto;
+	gap: 8px;
+	width: 100%;
+	margin-top: 8px;
+
+	@include desktop() {
+		gap: 24px;
+	}
+
+	.produtImage {
+		width: 68px;
+		height: 104px;
+		object-fit: contain;
+
+		@include desktop() {
+			width: 138px;
+			height: 212px;
+
+			@include media-breakpoint-down(lg) {
+				width: 112px;
+			}
+		}
+	}
+}
+
+.aloneProduct {
+	display: flex;
+	gap: 8px;
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start
+	}
+}
+
+.imageContainer {
+	position: relative;
+}
+
+span.selectController {
+	text-decoration: underline;
+	cursor: pointer;
+}

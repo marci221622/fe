@@ -1,0 +1,15 @@
+@import '@/ui/themes/config.scss';
+
+.counter {
+  grid-area: counter;
+  @include caption();
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 8px 0px;
+
+  @include desktop() {
+    color: $secondary-neutral-color;
+    opacity: 0.6;
+  }
+}

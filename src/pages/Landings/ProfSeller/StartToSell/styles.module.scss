@@ -1,0 +1,73 @@
+@import '@/ui/themes/config';
+
+.startToSell {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  @include desktop() {
+    margin-bottom: 48px;
+  }
+}
+
+.title {
+  font-family: TSUM Lenta;
+  font-style: normal;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin: 0 auto;
+  width: 210px;
+  padding: 8px 0;
+  @include desktop() {
+    width: max-content;
+    font-size: 27px;
+    padding: 13px 0 16px 0;
+    margin-bottom: 8px;
+  }
+}
+
+.description {
+  font-family: Geometria;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 13px;
+
+  @include desktop() {
+    font-size: 15px;
+    max-width: 450px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  @include desktop() {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.plate {
+  display: flex;
+  @include desktop() {
+    padding: 24px 32px;
+  }
+  padding: 8px 24px 4px 16px;
+  margin: 8px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 13px;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.icon {
+  @include desktop() {
+    min-width: 32px;
+    min-height: 32px;
+  }
+  min-width: 24px;
+  min-height: 24px;
+}

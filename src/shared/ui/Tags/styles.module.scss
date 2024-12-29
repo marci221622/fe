@@ -1,0 +1,29 @@
+@import '@/ui/themes/config.scss';
+
+.tags {
+	display: flex;
+	gap: 6px;
+	margin-bottom: 20px;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 20px;
+	overflow: hidden;
+	max-width: 100%;
+
+	@include desktop() {
+		justify-content: flex-start;
+	}
+
+	p {
+		display: block;
+		margin: 0;
+		max-width: 100%;
+
+		&:first-child {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+}

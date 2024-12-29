@@ -1,0 +1,115 @@
+@import '@/ui/themes/config.scss';
+
+.container {
+	background-color: #fff;
+
+	&.noTopBrands {
+		.wrapper {
+			grid-template-columns: auto;
+			grid-template-rows: 1fr auto;
+			grid-template-areas:
+				"titles"
+				"categories"
+				"action";
+		}
+	}
+}
+
+.wrapper {
+	@include templatePaddings();
+	max-width: $max-width-desktop;
+	margin: 0 auto;
+	background-color: #fff;
+	width: 100%;
+	padding-top: 32px;
+	display: grid;
+	grid-template-columns: 1fr minmax(auto, 384px);
+	grid-template-rows: 1fr auto;
+	grid-template-areas:
+		"titles titles"
+		"categories brands"
+		"action action";
+	gap: 32px;
+	border-bottom: 1px solid $higlight-color;
+}
+
+.brands {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-area: brands;
+	gap: 10px;
+	align-self: flex-start;
+
+	img {
+		margin-left: 0px;
+		max-width: 100%;
+		max-height: 40px;
+	}
+
+	li {
+		display: flex;
+		justify-self: center;
+		align-items: center;
+	}
+
+	a {
+		display: flex;
+		justify-self: center;
+		align-items: center;
+	}
+}
+
+.categories {
+	display: grid;
+	grid-area: categories;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
+	align-content: flex-start;
+
+	p {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}
+
+.titles {
+	grid-area: titles;
+	display: grid;
+	grid-template-columns: 1fr minmax(auto, 384px);
+
+	p {
+		font-weight: 700;
+		font-size: 14px;
+	}
+}
+
+.seeAll {
+	grid-area: action;
+	padding: 0px 0px 32px 0px;
+	@include caption();
+	font-size: 14px;
+	text-decoration: underline;
+	display: block;
+	text-align: center;
+}
+
+.category {
+	a {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+	}
+
+	img {
+		height: 32px;
+		width: 32px;
+		object-fit: contain;
+	}
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}

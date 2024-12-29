@@ -1,0 +1,21 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+	display: flex;
+	flex: 1;
+	position: relative;
+	flex-direction: column;
+	gap: 8px;
+	align-items: center;
+	width: 100%;
+
+	@include desktop() {
+		gap: 12px;
+	}
+
+	&.mobile {
+		.lastInput input {
+			border-bottom: 0px;
+		}
+	}
+}

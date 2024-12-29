@@ -1,0 +1,102 @@
+@import '@/ui/themes/config.scss';
+
+.list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 8px;
+
+	@include desktop() {
+		padding: 0 8px;
+	}
+
+	li {
+		display: flex;
+		padding: 8px 0;
+		margin-bottom: 0px;
+
+		&:not(:last-child) {
+			box-shadow: inset 0px -1px 0px $higlight-color;
+		}
+
+		&.title {
+			@include title();
+			text-transform: uppercase;
+			box-shadow: none;
+		}
+
+		span {
+			@include caption();
+			flex: 1;
+			font-size: 12px;
+			word-break: break-word;
+			white-space: pre-wrap;
+
+			@include desktop() {
+				font-size: 14px;
+			}
+
+			&:first-child {
+				&:not(.nobold) {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+	&.full {
+		gap: 16px;
+
+		li {
+			display: flex;
+			padding: 8px 0;
+			flex-direction: column;
+			gap: 12px;
+			box-shadow: none;
+
+			span {
+				@include title();
+				text-transform: uppercase;
+
+				&:last-child {
+					@include caption();
+					font-size: 14px;
+					text-transform: none;
+				}
+			}
+		}
+	}
+
+	&.appIsShort {
+		margin-top: 16px;
+
+		@include desktop() {
+			margin-top: 0px;
+		}
+	}
+}
+
+.article {
+	@include caption();
+	font-size: 14px;
+	text-decoration: underline;
+	cursor: pointer;
+	font-weight: normal;
+}
+
+.moreInfo {
+	@include caption();
+	text-decoration: underline;
+	font-weight: normal !important;
+	cursor: pointer;
+}
+
+.copiedText {
+	@include caption();
+	font-size: 12px;
+	color: #fff;
+
+	svg {
+		margin-right: 14px;
+	}
+}

@@ -1,0 +1,120 @@
+@import "@/ui/themes/config.scss";
+
+
+.title {
+  @include title();
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 19px;
+  color: $text-color-primary;
+  text-transform: uppercase;
+
+  @include desktop() {
+    font-size: 25px;
+  }
+}
+
+.infoTop {
+  margin-bottom: 1rem;
+}
+
+.infoTop,
+.infoBottom {
+  display: grid;
+  grid-template-columns: 416px 416px;
+  grid-gap: 15.8%;
+  justify-content: center;
+}
+
+.qrContainer {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.qrBackground {
+  padding: 0 42px 0;
+}
+
+.qrContent {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 55px;
+  width: 100%;
+}
+
+.qrTextContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.qrTitle {
+  max-width: 287px;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+.qrNote {
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.mobileApp {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+
+  picture {
+    display: flex;
+  }
+}
+
+.downloadApp {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  width: 316px;
+  padding: 8px 16px 8px 10px;
+  background-color: #fff;
+  box-shadow: 0 0 12px #99A0AD;
+  border-radius: 9px;
+
+  p {
+    margin-right: 8px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #000000;
+    font-weight: 500;
+  }
+}
+
+.downloadAppImage {
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.downloadAppButton {
+  margin-left: auto;
+  padding: 5.5px 8px;
+  font-size: 12px;
+  line-height: 1;
+  color: $text-color-primary;
+  border: 1.5px solid $primary-color;
+  border-radius: 7px;
+}
+
+.links {
+  margin-bottom: 8px;
+  justify-content: center;
+
+  a {
+    font-size: 17px;
+  }
+}

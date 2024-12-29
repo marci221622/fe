@@ -1,0 +1,53 @@
+@import "@/ui/themes/config.scss";
+
+
+.wrap {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 5px;
+	z-index: $z-prior + 2;
+
+	&.start:before {
+		left: 0;
+	}
+
+	&.complete:before {
+		animation: afterPending 0.3s;
+	}
+
+	&.play:before {
+		animation: progress 3s forwards;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		background: $secondary-color;
+		transition: opacity .3s;
+	}
+}
+
+@keyframes progress {
+	0% {
+		right: 100%
+	}
+
+	100% {
+		right: 30%
+	}
+}
+
+@keyframes afterPending {
+	0% {
+		right: 30%
+	}
+
+	100% {
+		right: 0;
+	}
+}

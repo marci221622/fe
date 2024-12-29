@@ -1,0 +1,94 @@
+@import '@/ui/themes/config.scss';
+
+.order {
+  border: 1px solid $services-gray;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+  position: relative;
+}
+
+.title {
+  @include caption();
+  font-weight: bold;
+  font-size: 14px;
+  align-self: flex-start;
+  margin-bottom: 12px;
+}
+
+.products {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+
+  @include desktop() {
+    gap: 24px;
+  }
+
+  .produtImage {
+    width: 70px;
+    height: 110px;
+    object-fit: contain;
+
+    @include desktop() {
+      width: 138px;
+      height: 212px;
+
+      @include media-breakpoint-down(lg) {
+        width: 112px;
+      }
+    }
+  }
+}
+
+.aloneProduct {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @include desktop() {
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 320px;
+
+    @include desktop() {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  }
+}
+
+.price {
+  margin-top: 16px;
+  position: absolute;
+  right: 16px;
+  top: 53px;
+
+  @include desktop() {
+    position: relative;
+    right: auto;
+    top: auto;
+  }
+}
+
+.labels {
+  margin-bottom: 6px;
+}
+
+.status {
+  margin-top: 8px;
+  color: #f84747;
+}

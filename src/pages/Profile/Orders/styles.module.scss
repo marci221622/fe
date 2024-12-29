@@ -1,0 +1,100 @@
+@import '@/ui/themes/config.scss';
+
+.actions {
+	margin-top: 32px;
+}
+
+.pageTitle {
+	margin-bottom: 0px;
+}
+
+.header {
+	justify-content: center;
+	position: relative;
+	align-items: center;
+	margin-bottom: 20px;
+	min-height: 24px;
+
+	@include desktop() {
+		min-height: auto;
+	}
+
+	svg {
+		transform: rotate(180deg);
+		position: absolute;
+		left: 10px;
+		display: block;
+		cursor: pointer;
+		top: 0px;
+
+		@include desktop() {
+			display: none;
+		}
+	}
+}
+
+.orderList {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 16px;
+	grid-area: content;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-areas:
+		"content";
+	gap: 16px;
+
+	@include desktop() {
+		grid-template-columns: $catalog-sidebar-width 1fr;
+		grid-template-rows: auto;
+		grid-template-areas:
+			"sidebar content";
+	}
+
+	&.notabs {
+		grid-template-columns: auto;
+		grid-template-areas:
+			"content";
+	}
+}
+
+.sidebar {
+	grid-area: sidebar;
+	display: none;
+
+	@include desktop() {
+		display: block;
+		position: sticky;
+	}
+}
+
+.tabs {
+	margin-bottom: 18px;
+	position: sticky;
+	top: $mobileNavHeight;
+	z-index: $z-minor;
+}
+
+.emptyContent {
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: inherit;
+
+	@include desktop() {
+		min-height: auto;
+		margin-top: 40px;
+	}
+}
+
+.emptyListText {
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+.catalogAction {
+	border-radius: 3px;
+}

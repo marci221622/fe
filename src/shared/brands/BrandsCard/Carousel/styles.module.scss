@@ -1,0 +1,155 @@
+@import '@/ui/themes/config.scss';
+
+$desktopWidth: 25%;
+$desktopNosidebarWidth: 20%;
+$desktopHeight: 184px;
+$gap: 8px;
+$gapMobile: 16px;
+
+.item {
+	display: flex;
+	gap: 16px;
+	position: relative;
+	padding-left: 16px;
+	padding-right: 16px;
+
+	@include desktop() {
+		display: block;
+
+		&.hasArrows {
+			// padding: 0px calc(84px + $gap);
+		}
+	}
+}
+
+.items {
+	display: flex;
+	gap: 22px;
+	flex-direction: column;
+
+	&:not(.carousel) {
+		.item {
+			@include hide-scroll();
+			@include templatePaddings();
+			@include mobileNegativeMargin();
+			overflow-x: auto;
+			overflow-y: hidden;
+		}
+	}
+}
+
+.carousel {
+	:global(.swiper) {
+		width: calc(100% - 84px - 84px - $gap - $gap);
+	}
+
+	.item {
+		width: 100%;
+		margin-bottom: 5px;
+
+		:global(.swiper-slide) {
+			display: flex;
+			justify-content: center;
+		}
+
+		[data-arrow="true"] {
+			top: calc($desktopHeight / 2);
+		}
+
+		:global(.swiper-button-prev) {
+			left: 0px;
+			display: none;
+		}
+
+		:global(.swiper-button-next) {
+			right: 0px;
+			display: none;
+		}
+
+		:global(.swiper-pagination) {
+			position: relative;
+			order: 2;
+			bottom: 0px;
+			display: initial;
+
+			@include desktop() {
+				display: none;
+			}
+
+			:global(.swiper-pagination-bullet-active) {
+				opacity: 1 !important;
+			}
+
+			:global(.swiper-pagination-bullet) {
+				background: #444;
+				opacity: .47;
+				width: 6px;
+				height: 6px;
+			}
+		}
+	}
+}
+
+div.slide {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: center;
+	max-width: 100%;
+	height: 100%;
+
+	&:not(:last-child) {
+		margin-right: $gapMobile;
+	}
+
+	@include desktop() {
+		width: $desktopWidth;
+
+		&.noSidevar {
+			width: $desktopNosidebarWidth;
+		}
+
+		&:not(:last-child) {
+			margin-right: $gap;
+		}
+	}
+
+	a {
+		width: 100%;
+		max-width: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	h2 {
+		white-space: nowrap;
+		@include textEllipsis();
+	}
+}
+
+div.actionSlide {
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 85px;
+
+	a {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.productImageContainer {
+	width: 100%;
+	height: $desktopHeight;
+	max-width: 100%;
+	position: relative;
+
+	img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		object-fit: contain;
+	}
+}

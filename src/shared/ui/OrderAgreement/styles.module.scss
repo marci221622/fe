@@ -1,0 +1,22 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+	font-size: 12px;
+	text-align: center !important;
+	width: 100%;
+
+	a {
+		text-decoration: underline;
+	}
+
+	&.hasMargin {
+		margin-top: 8px;
+	}
+
+	&.linkColored {
+		a {
+			color: $secondary-color;
+		}
+	}
+
+}

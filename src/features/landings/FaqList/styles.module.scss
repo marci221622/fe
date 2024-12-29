@@ -1,0 +1,54 @@
+@import '@/ui/themes/config.scss';
+
+.h2 {
+  display: none;
+
+  @include desktop() {
+    display: block;
+    @include title();
+    margin-bottom: 14px;
+    font-size: 17px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+div.panelWrapper {
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+
+  a {
+    color: $secondary-color;
+  }
+}
+
+.panelTitleWrapper {
+}
+
+.devider {
+  @include caption();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  margin: 0 !important;
+  text-transform: none;
+}
+
+.chevron {
+  display: flex;
+  flex-shrink: 0;
+  margin-left: 16px;
+  transition: 0.3s;
+
+  &.active {
+    transform: rotate(180deg);
+  }
+}
+
+.text {
+  white-space: pre-line;
+  font-size: 12px;
+  line-height: 1.5;
+}

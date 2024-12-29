@@ -1,0 +1,33 @@
+@import "@/ui/themes/config.scss";
+
+
+.productList {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(164px, 1fr));
+	grid-gap: 28px 16px;
+
+	@include desktop() {
+		grid-template-columns: repeat(3, minmax(220px, 1fr));
+		grid-gap: 16px;
+
+		// Центрирование на десктопе если нету сайдбара
+		&.nosidebar {
+			grid-template-columns: repeat(4, minmax(220px, 1fr));
+
+			&.centered_1 {
+				grid-template-columns: repeat(1, 268px);
+				justify-content: center;
+			}
+	
+			&.centered_2 {
+				grid-template-columns: repeat(2, 268px);
+				justify-content: center;
+			}
+	
+			&.centered_3 {
+				grid-template-columns: repeat(3, 268px);
+				justify-content: center;
+			}
+		}
+	}
+}

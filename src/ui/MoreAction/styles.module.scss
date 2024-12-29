@@ -1,0 +1,28 @@
+@import "@/ui/themes/config.scss";
+
+button.action {
+	@include title();
+	text-transform: uppercase;
+	align-self: center;
+	height: 80px;
+	width: 80px;
+	align-self: flex-end;
+	padding: 0px 2px;
+	text-wrap: wrap;
+	word-break: break-word;
+	font-size: 12px;
+
+	&.centered {
+		align-self: center;
+	}
+
+	&.wrapper {
+		font-size: 10px;
+
+		@include desktop() {
+			height: 84px;
+			width: 84px;
+			font-size: 13px;
+		}
+	}
+}

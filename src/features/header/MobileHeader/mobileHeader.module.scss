@@ -1,0 +1,97 @@
+@import '@/ui/themes/config.scss';
+
+.header {
+  box-sizing: border-box;
+  position: sticky;
+  height: $mobleHeaderHeight;
+  justify-content: space-between;
+  transition: transform $defaultTransitionMs ease;
+
+  a {
+    position: relative;
+  }
+}
+
+.children {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 16px;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 216px;
+  overflow: hidden;
+  flex-direction: column;
+  max-height: 100%;
+
+  svg,
+  img {
+    max-width: 100%;
+    height: 48px;
+  }
+
+  .mainTitle,
+  .subTitle {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.backArrow {
+  transform: rotate(180deg);
+}
+
+.basketLink {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.counter {
+  top: -6px;
+  right: 12px;
+}
+
+.rightSide,
+.leftSide {
+  width: 50px;
+  display: flex;
+  align-items: center;
+
+  &.searchable {
+    width: 82px;
+  }
+}
+
+.leftSide {
+  justify-content: flex-start;
+}
+
+.rightSide {
+  justify-content: flex-end;
+}
+
+.appLogo {
+  width: 216px;
+}
+
+.searchBox {
+  margin-right: 16px;
+}

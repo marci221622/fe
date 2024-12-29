@@ -1,0 +1,35 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+	display: flex;
+	gap: 16px;
+	flex-direction: column;
+	margin-bottom: 8px;
+	margin-top: 16px;
+
+	@include desktop() {
+		flex-direction: row;
+		margin-top: 8px;
+		align-items: center;
+	}
+
+	img {
+		border-radius: 12px;
+		max-width: 100%;
+
+		@include desktop() {
+			max-width: 50%;
+		}
+	}
+
+	.text {
+		text-align: center;
+		font-size: 13px;
+		white-space: pre-wrap;
+	}
+
+	.texts {
+		display: flex;
+		flex-direction: column;
+	}
+}

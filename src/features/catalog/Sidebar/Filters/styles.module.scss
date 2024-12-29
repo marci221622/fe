@@ -1,0 +1,164 @@
+@import '@/ui/themes/config.scss';
+
+.sidebar {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	padding-top: 12px;
+
+	.title {
+		transition: color 0.3s;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		a {
+			@include title();
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			gap: 6px;
+			font-size: 17px;
+			text-transform: uppercase;
+			padding-right: 16px;
+			height: 48px;
+
+			span {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				flex: 1;
+			}
+
+			&:hover {
+				color: $secondary-color !important;
+			}
+		}
+
+		>a>svg {
+			visibility: hidden;
+			opacity: 0;
+			min-width: 24px;
+			transition: all 0.3s ease;
+		}
+
+		&:hover {
+			>a>svg {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
+		&.bold {
+			>a {
+				font-weight: bold !important;
+			}
+		}
+
+		&.active,
+		&.selected {
+			>a>svg {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
+		&.selected {
+			border-radius: 9px;
+			background-color: #FCFBFD;
+		}
+	}
+
+	&.inner {
+		padding: 0px;
+		padding-left: 0px;
+		flex: 1 1 auto;
+		width: 100%;
+
+		.title {
+			a {
+				@include title();
+				font-size: 12px;
+				display: flex;
+				text-transform: none;
+				color: $text-color-primary;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&.allItemsNotSelected {
+		.title {
+			border-radius: 0px;
+			background-color: #FCFBFD;
+		}
+	}
+
+	&.lvl4 {
+		.title {
+			a {}
+		}
+	}
+
+	&.lvl3 {
+		.title {
+			a {
+				font-size: 13px;
+			}
+		}
+	}
+
+	&.lvl2 {
+		.title {
+			a {
+				font-size: 12px;
+			}
+		}
+	}
+
+	&.lvl1 {
+		.title {
+			a {
+				@include caption();
+				font-size: 13px;
+				text-transform: none;
+				height: 40px;
+			}
+		}
+	}
+
+	&.byTreeLvl0 {
+		.title {
+			a {
+				padding-left: 16px;
+			}
+		}
+	}
+
+	&.byTreeLvl1 {
+		.title {
+			a {
+				padding-left: 24px;
+			}
+		}
+	}
+
+	&.byTreeLvl2 {
+		.title {
+			a {
+				padding-left: 32px;
+			}
+		}
+	}
+
+	&.byTreeLvl3 {
+		.title {
+			a {
+				padding-left: 40px;
+			}
+		}
+	}
+}

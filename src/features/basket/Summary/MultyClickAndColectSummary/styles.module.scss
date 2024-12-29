@@ -1,0 +1,24 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+	display: flex;
+	flex: 1;
+	position: relative;
+	flex-direction: column;
+	gap: 2px;
+
+	p,
+	span {
+		font-size: 12px;
+
+		@include desktop() {
+			font-size: 14px;
+		}
+	}
+}
+
+.discount {
+	p, span {
+		color: $secondary-color;
+	}
+}

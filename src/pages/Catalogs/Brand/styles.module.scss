@@ -1,0 +1,68 @@
+@import '@/ui/themes/config.scss';
+
+.brandLogo {
+  &[data-brandlogo] {
+    max-width: 348px;
+  }
+}
+
+.startIconWrapper {
+  left: 50%;
+  transform: translate(-50%, -10px);
+  border-radius: 50%;
+  z-index: 2;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  display: none;
+  width: 52px;
+  height: 52px;
+
+  &.opened {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  svg {
+    margin: auto;
+  }
+
+  @include desktop() {
+    position: relative;
+    transform: none;
+    padding: 0px;
+    z-index: $z-minor;
+    left: 0px;
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+.favoriteBrandStar {
+  // flex в мобильном сафари на версии ios < 16 не работает
+  // c margin: 0 auto;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+
+  &.stub {
+    margin-bottom: 11px;
+
+    @include desktop() {
+      display: none;
+    }
+  }
+}
+
+.BrandCatalogPage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+}

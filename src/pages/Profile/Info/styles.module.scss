@@ -1,0 +1,42 @@
+@import '@/ui/themes/config.scss';
+
+.listTitle {
+  @include title();
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.list {
+  margin-bottom: 20px;
+}
+
+.header {
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin-bottom: 20px;
+  min-height: 24px;
+
+  @include desktop() {
+    min-height: auto;
+  }
+
+  svg {
+    transform: rotate(180deg);
+    position: absolute;
+    left: 0;
+    display: block;
+    cursor: pointer;
+    top: 0;
+
+    @include desktop() {
+      display: none;
+    }
+  }
+}
+
+.pageTitle {
+  margin-bottom: 0;
+  font-size: 19px;
+}

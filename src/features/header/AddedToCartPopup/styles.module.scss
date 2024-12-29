@@ -1,0 +1,46 @@
+@import "@/ui/themes/config.scss";
+
+
+.popupContainer {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	background-color: #fff;
+	min-width: 300px;
+	justify-content: flex-start;
+	align-items: center;
+
+	@include desktop() {
+		width: calc(384px - 16px * 2);
+	}
+
+	img {
+		max-width: 190px;
+	}
+
+	.text {
+		font-size: 12px;
+	}
+}
+
+.title {
+	@include title();
+	font-size: 17px;
+}
+
+.popup {
+	z-index: $z-critical;
+}
+
+.space {
+	width: 100%;
+	margin-top: 16px;
+}
+
+.bodyWrapper {
+	padding-top: 0px;
+}
+
+.continue {
+	width: 100%;
+}

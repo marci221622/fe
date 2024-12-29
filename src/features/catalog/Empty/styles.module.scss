@@ -1,0 +1,22 @@
+@import '@/ui/themes/config.scss';
+
+.catalogEmptyText {
+	@include caption();
+	text-align: center;
+
+	@include desktop() {
+		padding: 0 20% 0 20%;
+	}
+
+	&.withCatalogLink {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+    align-items: center;
+		font-size: 12px;
+
+		@include desktop() {
+			font-size: 15px;
+		}
+	}
+}

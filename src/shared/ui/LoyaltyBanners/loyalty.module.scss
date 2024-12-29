@@ -1,0 +1,77 @@
+@import "@/ui/themes/config.scss";
+
+.body {
+  padding: 16px 32px;
+  font-size: 13px;
+  white-space: pre-line;
+  display: inline-flex;
+  flex-direction: row;
+  gap: 0px;
+}
+
+.moreLink {
+  text-decoration: underline;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.fullDescription {
+  text-align: center;
+  padding: 8px 0px;
+}
+
+.home {
+  margin-bottom: 26px;
+
+  @include desktop() {
+    margin-bottom: 37.5px;
+    margin-top: -18px;
+  }
+}
+
+.product {
+  margin-top: 16px;
+}
+
+.cart {
+  margin-bottom: 16px;
+  width: 100%;
+
+  @include desktop() {
+    margin-top: -18px;
+    margin-bottom: 29.5px;
+  }
+}
+
+.catalog {
+  margin-bottom: 16px;
+  width: 100%;
+
+  @include desktop() {
+    margin-bottom: 29.5px;
+  }
+}
+
+.addedToCart {
+  margin-top: 16px;
+}
+
+.copyIcon {
+  cursor: pointer;
+}
+
+.copiedText {
+  @include caption();
+  font-size: 12px;
+  color: #fff;
+
+  svg {
+    margin-right: 14px;
+  }
+}
+
+.copyIconWrapper {
+  display: inline-flex;
+  position: relative;
+  margin-left: 8px;
+}

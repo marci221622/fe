@@ -1,0 +1,32 @@
+@import '@/ui/themes/config.scss';
+
+.menuWrapper {
+  flex: 1;
+}
+
+.sidebarWrapper {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 0px;
+	background-color: $extrahighlight-color;
+	border-radius: 16px;
+	padding: 8px 16px;
+
+	li {
+		display: flex;
+		text-transform: none;
+		color: $text-color-primary;
+    height: 56px;
+
+    [data-title] {
+      font-size: 15px;
+    }
+	}
+}
+
+.box {
+	position: sticky;
+	transition: top $defaultTransitionMs ease;
+	padding-top: 5px;
+}

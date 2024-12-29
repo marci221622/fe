@@ -1,0 +1,56 @@
+@import '@/ui/themes/config.scss';
+
+.error500 {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleContainer {
+  padding: 8px 0;
+}
+
+.title {
+  @include title();
+  @include desktop() {
+    font-size: 27px;
+    padding: 13px 0 10px 0;
+  }
+  font-size: 19px;
+  padding: 10px 0 7px 0;
+  text-align: center;
+}
+
+.descriptionContainer {
+  padding: 8px 16px;
+  width: 345px;
+  @include desktop() {
+    margin-bottom: 16px;
+  }
+}
+
+.description {
+  @include desktop() {
+    @include caption(large, normal);
+  }
+  @include caption(small, normal);
+  text-align: center;
+}
+
+.buttonContainer {
+  padding: 8px 16px;
+  margin-bottom: 32px;
+  @include desktop() {
+    margin-bottom: 48px;
+  }
+}
+
+.button {
+  width: calc(100vw - 40px);
+}
+
+.banner {
+}

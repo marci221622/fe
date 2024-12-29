@@ -1,0 +1,74 @@
+@import '@/shared/animations.module.scss';
+@import '@/ui/themes/config.scss';
+
+.brands {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 8px;
+  grid-auto-rows: 1fr;
+  margin-bottom: 26px;
+
+  @include desktop() {
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 37.5px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: flex;
+    }
+
+    .brandTitle {
+      @include caption('small');
+      width: 100%;
+      max-height: 40px;
+      line-height: 40px;
+      max-width: 30vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;
+
+      @include desktop() {
+        width: 168px;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-height: 40px;
+      height: 40px;
+      object-fit: contain;
+      max-width: 100%;
+
+      @include desktop() {
+        width: 168px;
+      }
+    }
+  }
+}
+
+.titleContainer {
+  display: flex;
+}
+
+.title {
+  @include title();
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 11px;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: $secondary-color;
+
+  @include desktop() {
+    font-size: 27px;
+    margin-bottom: 26.5px;
+  }
+}

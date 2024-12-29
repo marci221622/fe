@@ -1,0 +1,160 @@
+@import '@/ui/themes/config.scss';
+
+// TODO: Стили как в header
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-$headerHeight - 20px);
+  height: $headerHeight;
+  transition: all $defaultTransitionMs ease;
+  gap: 8px;
+  height: $headerHeight + 2px;
+  opacity: 0;
+  z-index: $z-prior;
+
+  &.galleryOpened {
+    z-index: $z-prior + 1;
+  }
+
+  &.compactOnly {
+    height: $compactHeaderHeight + 2px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0 48px 0px 48px;
+    }
+
+    .breadcrumbs {
+      display: none;
+    }
+
+    .compact {
+      border-bottom: 1px solid $services-gray;
+    }
+
+    .close {
+      display: block;
+    }
+  }
+
+  a {
+    position: relative;
+  }
+
+  @include desktop() {
+    padding: 0 8px 0px 8px;
+  }
+
+  &.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.compact {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: $mobleHeaderHeight;
+  z-index: 2;
+  align-items: center;
+  padding-bottom: 9px;
+
+  .actions {
+    flex: 0.3;
+  }
+
+  @include desktop() {
+    height: $compactHeaderHeight;
+
+    .actions {
+      flex: auto;
+    }
+  }
+}
+
+.leftSide {
+  flex: auto;
+  position: relative;
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 320px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 16.5px;
+
+  svg {
+    fill: $primary-color;
+  }
+}
+
+.counter {
+  top: -2px;
+  right: 35%;
+}
+
+.productLogo {
+  max-width: 52px;
+  object-fit: contain;
+}
+
+.brandLogo {
+  max-height: 24px;
+  line-height: 24px;
+}
+
+.breadcrumbs,
+.compact {
+  width: 100%;
+  max-width: $max-width-desktop;
+  margin: 0 auto;
+}
+
+.breadcrumbs {
+  align-items: center;
+  height: 56px;
+  border-bottom: 1px solid $services-gray;
+}
+
+.close {
+  display: none;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.back {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  cursor: pointer;
+}
+
+.controlls {
+  display: flex;
+}

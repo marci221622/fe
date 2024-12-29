@@ -1,0 +1,123 @@
+@import '@/ui/themes/config.scss';
+
+
+.wrapper {
+	display: grid;
+	grid-template-areas:
+		"filters"
+		"counter"
+		"list"
+		"pagination";
+	grid-template-rows: auto auto minmax(222px, 1fr) auto;
+
+	@include desktop() {
+		grid-template-rows: auto auto minmax(144px, 1fr) auto;
+		grid-template-columns: $catalog-sidebar-width 1fr;
+		grid-template-areas:
+			"sidebar filters"
+			"sidebar counter"
+			"sidebar list"
+			". pagination"
+	}
+}
+
+.sidebar {
+	grid-area: sidebar;
+	display: none;
+	padding: 0px;
+
+	@include desktop() {
+		display: block;
+		align-self: flex-start;
+	}
+}
+
+.box {
+	transition: top $defaultTransitionMs ease;
+	padding-top: 5px;
+}
+
+.filters {
+	grid-area: filters;
+	text-align: center;
+	min-height: 48px;
+	position: sticky;
+	z-index: $z-minor;
+	background-color: #fff;
+	margin-bottom: 4px;
+	display: flex;
+	align-items: center;
+	padding: 4px 0;
+	padding-top: 22px;
+	overflow: hidden;
+	transition: all $defaultTransitionMs ease;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 1px;
+	@include mobileNegativeMargin();
+
+	&.noMobileFilters {
+		display: none;
+
+		@include desktop() {
+			display: flex;
+		}
+	}
+
+	&.appIsShort {
+		padding-top: 16px;
+		top: 0px;
+		padding-top: 8px;
+	}
+
+	&.scrollDirIsDown {
+		transform: translateY(-100%);
+	}
+
+	@include desktop() {
+		padding: 8px 0 8px 16px;
+		padding-top: 22px;
+		transform: none;
+		margin-left: 0px;
+		margin-right: 0px;
+
+		&.noDesktopFilters {
+			display: none;
+		}
+
+		&.nosidebar {
+			grid-column: 1 / -1;
+		}
+	}
+
+	.inner {
+		display: flex;
+		flex: 1;
+		position: relative;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.contentWithFilters {
+	grid-area: list;
+
+	@include desktop() {
+		padding-left: 16px;
+
+		&.nosidebar {
+			grid-column: 1 / -1;
+			padding-left: 0px;
+		}
+	}
+
+	&.empty {
+		align-self: center;
+	}
+}
+
+.pageTitleShort {
+	margin-top: 22px;
+}

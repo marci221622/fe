@@ -1,0 +1,346 @@
+@import '@/ui/themes/config.scss';
+
+.pageTitle {
+  position: sticky;
+  z-index: $z-minor;
+  background: #fff;
+  display: none;
+  margin-bottom: 18px;
+
+  @include desktop() {
+    display: block;
+  }
+}
+
+.itemsList {
+  grid-area: itemsList;
+  width: 100%;
+}
+
+.promocodeMobile {
+  grid-area: promocodeMobile;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.chatBadge {
+  grid-area: chat;
+  position: sticky;
+  bottom: calc($mobileNavHeight + 115px);
+  margin-left: auto;
+
+  &.hasLoyalty {
+    bottom: calc($mobileNavHeight + 115px + 75px);
+  }
+
+  &.noItemsCustomBadge {
+    bottom: calc($mobileNavHeight + 10px);
+  }
+}
+
+.mobileSummary {
+  grid-area: mobileSummary;
+  position: sticky;
+  bottom: $mobileNavHeight;
+  background-color: #fff;
+  z-index: 2;
+
+  .actions {
+    margin-top: 16px;
+  }
+
+  .info {
+    padding: 8px 0px;
+    padding-bottom: max(env(safe-area-inset-bottom, 8px), 8px);
+  }
+}
+
+.notExists {
+  grid-area: notExists;
+  display: none;
+
+  @include desktop() {
+    display: flex;
+  }
+}
+
+.checkout {
+  grid-area: checkout;
+  display: none;
+
+  @include desktop() {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: $z-minor;
+    min-height: 500px;
+
+    &.active {
+      z-index: $z-minor + 1;
+
+      .form {
+        z-index: 2;
+      }
+    }
+  }
+
+  .form {
+    position: sticky;
+    transition: all $defaultTransitionMs ease;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    background-color: #fff;
+    align-items: center;
+
+    @include desktop() {
+      gap: 12px;
+    }
+
+    &.stucked {
+      padding-top: 28px;
+    }
+  }
+
+  .info {
+    position: sticky;
+    bottom: $stickyPaneHeight;
+    background-color: #fff;
+    margin-top: 100px;
+
+    @include desktop() {
+      margin-top: 0px;
+    }
+  }
+}
+
+.cart {
+  display: grid;
+  gap: 16px 32px;
+  grid-template-areas:
+    'itemsList'
+    'separator'
+    'notExists'
+    'promocodeMobile'
+    'chat'
+    'mobileSummary';
+  grid-template-columns: minmax(100%, 1fr);
+
+  @include desktop() {
+    grid-template-areas: 'content checkout';
+    grid-template-columns: 1fr 384px;
+    grid-template-rows: minmax(177px, auto);
+  }
+
+  &:not(.hasExistedItems) {
+    &.hasNotExistedItems {
+      grid-template-areas:
+        'emptyTextContainer'
+        'content';
+      grid-template-columns: auto;
+      grid-template-rows: auto 1fr;
+
+      .emptyTextContainer {
+        margin: 40px auto 32px auto;
+      }
+    }
+  }
+
+  .emptyChatBadge {
+    margin-left: auto;
+    position: fixed;
+    margin-bottom: max(env(safe-area-inset-bottom, 8px), 8px);
+    bottom: $mobileNavHeight;
+    right: 16px;
+    z-index: $z-minor + 2;
+
+    @include desktop() {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &.mobileCart {
+    grid-template-areas:
+      'itemsList'
+      'promocodeMobile'
+      'chat'
+      'mobileSummary';
+
+    &.isExistedTab {
+      &.noExistedItems {
+        grid-template-areas:
+          'emptyTextContainer'
+          'viewedVidget'
+          'chat';
+      }
+    }
+
+    .emptyChatBadge {
+      margin-left: auto;
+    }
+  }
+
+  &.noItems {
+    grid-template-areas:
+      'emptyTextContainer'
+      'viewedWidget';
+    grid-template-columns: 100%;
+  }
+}
+
+.emptyTextContainer {
+  grid-area: emptyTextContainer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px auto 16px auto;
+}
+
+.emptyText {
+  margin: 72px 0 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include desktop() {
+    margin: 0 0 16px 0;
+  }
+}
+
+.test {
+  display: flex;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  flex: 1;
+  width: 100%;
+  z-index: 2;
+  flex-direction: column;
+
+  button {
+    width: 100%;
+  }
+}
+
+.separator {
+  grid-area: separator;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 16px;
+  display: none;
+
+  @include desktop() {
+    display: flex;
+  }
+
+  p {
+    font-weight: 700;
+    font-size: 15px;
+
+    &.clearAll {
+      font-weight: 400;
+      font-size: 12px;
+      color: $secondary-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.actionWrapper {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  .shortLogin {
+    @include caption();
+    text-transform: none;
+    font-size: 12px;
+    text-decoration: underline;
+    position: absolute;
+    right: 16px;
+  }
+}
+
+.tabs {
+  margin-bottom: 16px;
+  position: sticky;
+  top: $mobileNavHeight;
+  z-index: $z-minor;
+}
+
+.deliveryGroupTitle {
+  @include caption('large', 'bold');
+  padding: 8px 16px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+
+  &.isNotAvialible {
+    color: $error-color;
+  }
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+}
+
+.breadcrumbs {
+  height: auto;
+}
+
+.viewedWidget {
+  grid-area: viewedWidget;
+}
+
+.pane {
+  @include desktop() {
+    display: none;
+
+    &.visibility {
+      display: grid;
+      max-width: 384px;
+      grid-template-columns: 1fr;
+      margin-left: auto;
+    }
+  }
+}
+
+.viewedTitle {
+  font-size: 17px;
+}
+
+.loyaltyBody {
+  width: 100%;
+}
+
+.existedEmptyTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goToFavoriteButton {
+  width: fit-content;
+  margin-bottom: 82px;
+
+  @include desktop() {
+    margin-bottom: 0;
+  }
+}
+
+.multyClickAndColelctActions {
+  margin-bottom: auto;
+}

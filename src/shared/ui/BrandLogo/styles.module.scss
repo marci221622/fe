@@ -1,0 +1,23 @@
+@import '@/ui/themes/config.scss';
+
+$default-logo-margin: -4px;
+
+.logo {
+  height: 48px;
+  object-fit: contain;
+  max-width: 100%;
+  margin-left: $default-logo-margin;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 30px);
+}
+
+.logoText {
+  max-width: calc(100% - 30px);
+  @include title();
+  text-transform: uppercase;
+  line-height: 48px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

@@ -1,0 +1,30 @@
+@import "@/ui/themes/config.scss";
+
+.erid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $text-color-primary;
+  @include caption("small");
+  padding: 1px 4px;
+  border-radius: 3px;
+  background-color: $white40;
+  width: min-content;
+  cursor: pointer;
+
+  @include desktop() {
+    @include caption("minimal");
+  }
+}
+
+.content {
+  width: 316px;
+
+  .group {
+    padding: 8px 0px;
+
+    @include desktop() {
+      padding: 8px 16px;
+    }
+  }
+}

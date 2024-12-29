@@ -1,0 +1,9 @@
+@import '@/ui/themes/config.scss';
+
+.space {
+	flex-direction: row-reverse;
+
+	@include desktop() {
+		flex-direction: column;
+	}
+}

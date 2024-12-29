@@ -1,0 +1,35 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  justify-content: flex-start;
+  align-items: center;
+
+  &.appIsShort {
+    padding-top: 20px;
+  }
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.additionalText {
+  white-space: pre-line;
+  text-align: center;
+}
+
+.infoWrapper {
+  text-align: center;
+}
+
+button.applicationLink {
+  width: fit-content;
+  align-self: center;
+}
+
+.description {
+  white-space: pre-wrap;
+}

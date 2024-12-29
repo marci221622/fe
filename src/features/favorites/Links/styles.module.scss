@@ -1,0 +1,14 @@
+@import '@/ui/themes/config.scss';
+
+.links {
+	gap: 16px;
+
+	a {
+		min-width: auto;
+		margin-right: 0
+	}
+
+	@include desktop() {
+		padding-left: 16px;
+	}
+}

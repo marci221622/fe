@@ -1,0 +1,12 @@
+@import "@/ui/themes/config.scss";
+
+
+.body {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	p {
+		font-size: 12px;
+	}
+}

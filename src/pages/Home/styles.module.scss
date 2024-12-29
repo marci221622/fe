@@ -1,0 +1,47 @@
+@import "@/ui/themes/config.scss";
+
+
+.genders {
+	display: block;
+	margin-left: -16px;
+	margin-right: -16px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 20px;
+
+	@include desktop() {
+		display: none;
+	}
+}
+
+.search {
+	position: fixed;
+	z-index: 1;
+	background: #fff;
+	width: 100%;
+	left: 0px;
+	height: calc(100% - 130px - $mobileNavHeight);
+	top: 130px;
+	overflow: auto;
+	padding: 0px 6px;
+}
+
+.contentWrapper {
+	[data-homeblock="true"] {
+		&:not(:last-child) {
+			margin-bottom: 26px;
+
+			@include desktop() {
+				margin-bottom: 61.5px;
+			}
+		}
+	}
+}
+
+.advantages {
+	margin-top: 40px;
+
+	@include desktop() {
+		margin-top: 66px;
+	}
+}

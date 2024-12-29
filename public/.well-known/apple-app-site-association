@@ -1,0 +1,69 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "M74DBSW7PB.com.tsum.collect",
+        "paths": [
+          "/",
+          "/women/*",
+          "/men/*",
+          "/catalog/*",
+          "/women/catalog/*",
+          "/men/catalog/*",
+          "/brands/*",
+          "/women/brands/*",
+          "/men/brands/*",
+          "/collection/*",
+          "/women/collection/*",
+          "/men/collection/*",
+          "/brand/*",
+          "/women/brand/*",
+          "/men/brand/*",
+          "/item/*",
+          "/women/item/*",
+          "/men/item/*",
+          "/profile/*",
+          "/seller/*",
+          "/favorites/",
+          "/favorites/brands/",
+          "/cart/",
+          "/orders/",
+          "/order/*",
+          "/faq"
+        ]
+      },
+      {
+        "appID": "M74DBSW7PB.com.tsum.utp-dev",
+        "paths": [
+          "/",
+          "/women/*",
+          "/men/*",
+          "/catalog/*",
+          "/women/catalog/*",
+          "/men/catalog/*",
+          "/brands/*",
+          "/women/brands/*",
+          "/men/brands/*",
+          "/collection/*",
+          "/women/collection/*",
+          "/men/collection/*",
+          "/brand/*",
+          "/women/brand/*",
+          "/men/brand/*",
+          "/item/*",
+          "/women/item/*",
+          "/men/item/*",
+          "/profile/*",
+          "/seller/*",
+          "/favorites/",
+          "/favorites/brands/",
+          "/cart/",
+          "/orders/",
+          "/order/*",
+          "/faq"
+        ]
+      }
+    ]
+  }
+}

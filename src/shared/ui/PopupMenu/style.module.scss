@@ -1,0 +1,41 @@
+@import "@/ui/themes/config.scss";
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 16px 0 rgba(27, 27, 27, 0.24);
+
+  .header {
+    display: flex;
+    position: relative;
+    min-height: 56px;
+    justify-content: center;
+    align-items: center;
+
+    &>p {
+      margin: 0;
+      font-family: "TSUM Lenta";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 28px;
+      letter-spacing: 1.36px;
+      text-align: center;
+      color: $text-color-primary;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

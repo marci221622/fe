@@ -1,0 +1,20 @@
+.links {
+	gap: 55px;
+
+	a {
+		min-width: auto;
+		margin-right: 0
+	}
+}
+
+.ProfileTabs {
+	justify-content: space-between;
+	margin-bottom: 24px;
+
+	button.logoutAction {
+		padding-left: 16px;
+		padding-right: 16px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+}

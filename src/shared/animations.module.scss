@@ -1,0 +1,38 @@
+@import '@/ui/themes/config.scss';
+
+@mixin withSticky($desktopGap: 0px, $mobileGap: 0px) {
+	position: sticky;
+	top: $mobleHeaderHeight + $mobileGap;
+
+	@include desktop() {
+		top: $headerHeight + $desktopGap;
+
+		&.stucked {
+			top: $compactHeaderHeight + $desktopGap;
+		}
+	}
+
+	&.withBanner {
+		top: $mobleHeaderHeight + $headerStickyBannerHeigth + $mobileGap;
+
+		@include desktop() {
+			top: $headerHeight + $headerStickyBannerHeigth + $desktopGap;
+
+			&.stucked {
+				top: $compactHeaderHeight + $headerStickyBannerHeigth + $desktopGap;
+			}
+		}
+	}
+}
+
+.wrapper {
+	@include withSticky();
+}
+
+.header {
+	top: 0px;
+
+	&.withBanner {
+		top: $headerStickyBannerHeigth;
+	}
+}

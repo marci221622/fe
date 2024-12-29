@@ -1,0 +1,18 @@
+@import "@/ui/themes/config.scss";
+
+
+.productList {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(164px, 1fr));
+	grid-gap: 28px 16px;
+	justify-items: center;
+
+	@include desktop() {
+		grid-template-columns: repeat(3, minmax(220px, 1fr));
+		grid-gap: 16px;
+
+		&.nosidebar {
+			grid-template-columns: repeat(4, minmax(220px, 1fr));
+		}
+	}
+}

@@ -1,0 +1,84 @@
+@import "@/ui/themes/config.scss";
+
+.actions {
+	position: sticky;
+	bottom: -16px;
+	width: 100%;
+	background-color: #fff;
+	padding: 8px 0px;
+	margin-top: auto;
+
+	button {
+		margin-top: 16px;
+	}
+}
+
+.space {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex: 1;
+	height: 100%;
+}
+
+.form {
+	display: flex;
+	gap: 8px;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 100%;
+	width: 100%;
+}
+
+.chatBadge {
+	position: absolute;
+	right: 0px;
+	transform: translateY(calc(-100% - 7px));
+}
+
+.loyaltyWrapper {
+	@include caption(small);
+	min-height: $headerStickyBannerHeigth;
+	background-color: $primary-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 8px;
+	color: #fff;
+	text-align: center;
+	width: calc(100% + 16px + 16px);
+	margin-right: -16px;
+	margin-left: -16px;
+
+	p {
+		color: #fff
+	}
+}
+
+.header {
+	display: flex;
+	justify-content: center;
+
+	.shortLogin {
+		@include caption();
+		text-transform: none;
+		font-size: 12px;
+		text-decoration: underline;
+		position: absolute;
+		right: 16px;
+		cursor: pointer;
+	}
+}
+
+.deliveryDetails {
+	order: 3;
+
+	@include desktop() {
+		order: initial
+	}
+}
+
+.romsAction {
+	text-decoration: underline;
+	cursor: pointer;
+}

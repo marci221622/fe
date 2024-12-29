@@ -1,0 +1,26 @@
+@import '@/ui/themes/config.scss';
+
+.actionsInner {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	flex-grow: 1;
+
+	@include desktop() {
+		gap: 33px;
+	}
+}
+
+.actionsSpace {
+	gap: 8px;
+
+	@include desktop() {
+		gap: 33px;
+	}
+}
+
+svg.checkedIcon {
+	width: 15px;
+	height: 15px;
+	margin-right: 8px;
+}

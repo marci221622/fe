@@ -1,0 +1,111 @@
+@import "./responsive.scss";
+
+// FROM_TSUM_APP
+@mixin font-face($family, $font-path) {
+	@font-face {
+		font-family: $family;
+		src: url('./assets/fonts' + $font-path + '.eot');
+
+		src: url('./assets/fonts' + $font-path + '.eot?#iefix') format('embedded-opentype'),
+			url('./assets/fonts' + $font-path + '.woff2') format('woff2'),
+			url('./assets/fonts' + $font-path + '.woff') format('woff'),
+			url('./assets/fonts' + $font-path + '.ttf') format('truetype');
+		@content;
+	}
+}
+
+@include font-face('Geometria', '/geometria/regular') {
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@include font-face('Geometria', '/geometria-light/light') {
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@include font-face('Geometria', '/geometria-medium/medium') {
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@include font-face('Geometria', '/geometria-bold/bold') {
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@include font-face('Tsum Lenta', '/lenta/regular') {
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@include font-face('21 Cent', '/21-cent/30C0FC_3_0') {
+	font-weight: 400;
+	font-style: normal;
+}
+
+@include font-face('21 Cent', '/21-cent/30C0FC_2_0') {
+	font-weight: 400;
+	font-style: italic;
+}
+
+@include font-face('21 Cent', '/21-cent/30C0FC_0_0') {
+	font-weight: 600;
+	font-style: normal;
+}
+
+@include font-face('21 Cent', '/21-cent/30C0FC_1_0') {
+	font-weight: 600;
+	font-style: italic;
+}
+
+@include font-face('Noto', '/noto/regular') {
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@include font-face('Noto', '/noto-bold/bold') {
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+h1,
+h2,
+h4 {
+	font-family: 'Tsum Lenta'
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: Geometria
+}
+
+@include mobile() {
+
+	input[type="color"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"],
+	select:focus,
+	textarea {
+		font-size: 16px;
+	}
+}

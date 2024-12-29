@@ -1,0 +1,184 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  position: relative;
+  flex-direction: column;
+  max-height: 100%;
+  overflow: hidden;
+
+  @include mobileNegativeMargin(true);
+
+  @include desktop() {
+    max-height: calc(100vh - $compactHeaderHeight);
+    overflow: auto;
+
+    &.withBanner {
+      max-height: calc(100vh - $compactHeaderHeight - $headerStickyBannerHeigth);
+    }
+  }
+
+  input {
+    @include caption();
+    text-overflow: ellipsis;
+    font-size: 14px;
+    color: rgba(29, 46, 55, 0.6);
+    font-weight: 400;
+  }
+}
+
+.suggests {
+  padding-bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include templatePaddings();
+
+  &.products {
+    @include hide-scroll();
+    flex-direction: row;
+    max-width: 100%;
+    overflow: auto;
+
+    li.productItem {
+      box-shadow: none;
+      padding: 0px;
+    }
+
+    @include desktop() {
+      display: none;
+    }
+  }
+
+  @include desktop() {
+    padding-left: 0px;
+    padding-right: 0px;
+    gap: 0px;
+  }
+
+  li {
+    @include caption();
+    font-size: 13px;
+    cursor: pointer;
+    padding: 14px 0px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+
+    @include desktop() {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    svg {
+      margin-right: 19px;
+    }
+
+    &:not(:last-child) {
+      box-shadow: inset 0px -1px 0px $higlight-color;
+    }
+
+    &.selected {
+      background-color: $higlight-color;
+    }
+  }
+}
+
+.title {
+  @include title();
+  text-transform: uppercase;
+  font-size: 12px;
+
+  @include desktop() {
+    font-size: 17px;
+  }
+}
+
+.list {
+  margin-top: 12px;
+  max-height: 100%;
+  display: none;
+
+  &.visibility {
+    display: block;
+  }
+
+  @include desktop() {
+    margin-top: 24px;
+  }
+
+  &.productsWrapper {
+    &.visibility {
+      display: block;
+
+      @include desktop {
+        display: none;
+      }
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
+.clearHeader {
+  width: 100%;
+  justify-content: space-between;
+  height: 40px;
+  @include templatePaddings();
+  align-items: center;
+
+  .clear {
+    cursor: pointer;
+    font-size: 13px;
+  }
+}
+
+.closePopupText {
+  margin-left: 32px;
+  cursor: pointer;
+}
+
+.field {
+  display: none;
+
+  @include desktop() {
+    display: block;
+
+    input {
+      height: auto;
+      border-radius: 0;
+    }
+
+    &>span {
+      left: 7px;
+    }
+  }
+}
+
+.listsContainer {
+  @include hide-scroll();
+  max-width: 100%;
+}
+
+.head {
+  @include templatePaddings();
+
+  @include desktop() {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.searchGenders {
+  width: 100%;
+
+  a {
+    flex: 1;
+  }
+}

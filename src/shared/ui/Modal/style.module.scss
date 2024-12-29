@@ -1,0 +1,65 @@
+@import '@/ui/themes/config.scss';
+
+.overlay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, .2);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  z-index: $z-prior;
+  touch-action: none;
+}
+
+.header {
+  padding: 20px 40px;
+  font-size: 17px;
+  color: $text-color-primary;
+  flex-shrink: 0;
+  position: relative;
+  @include title();
+  text-transform: uppercase;
+
+  &.centeredHeader {
+    text-align: center
+  }
+
+  &.bordered {
+    border-bottom: 1px solid $services-gray;
+  }
+
+  @include desktop() {
+    min-height: 60px;
+  }
+}
+
+.header.fullHeader {
+  padding: 20px 24px 20px 24px;
+
+  >section {
+    margin: 0;
+  }
+}
+
+.body {
+  padding: 16px;
+  padding-top: 0px;
+  position: relative;
+
+  &.noPadding {
+    padding: 0
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &.fullScreen {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,88 @@
+@import "@/ui/themes/config.scss";
+
+
+.header {
+  height: 56px;
+  padding: 16px 0 0 0;
+
+  .close {
+    top: calc(50% - 16px);
+    transform: translateY(calc(-50% - 16px));
+  }
+}
+
+.title {
+  max-width: 70%;
+  margin: 0 auto !important;
+  font-family: "TSUM Lenta";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: 1.36px;
+  text-align: center;
+  color: $text-color-primary;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &.withReset {
+    max-width: 57%;
+  }
+}
+
+.popupContainer {
+  z-index: $z-minor + 1;
+
+  >div {
+    margin-left: -8px;
+  }
+}
+
+.popup {
+  width: 368px;
+  max-height: 550px;
+  padding: 0;
+  overflow: hidden;
+
+  &.sizeLarge {
+    width: 416px;
+  }
+
+  &.withHeader {
+    >div:first-child {
+      height: 56px;
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 22px;
+  cursor: pointer;
+}
+
+.reset {
+  position: absolute;
+  top: 22px;
+  left: auto;
+  right: 16px;
+  padding: 0;
+  font-size: 13px;
+  line-height: normal;
+  color: $text-color-primary;
+  background-color: transparent;
+}
+
+.mobileHeaderWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.arrow {
+  z-index: $z-minor;
+}

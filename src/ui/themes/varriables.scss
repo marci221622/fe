@@ -1,0 +1,53 @@
+$z-critical: 500;
+$z-prior: 300;
+$z-regular: 100;
+$z-minor: 10;
+$max-width-desktop: 1184px;
+
+// colors
+$primary-color: #1B1B1B;
+$secondary-color: #F94F0D;
+$white40: rgba(255, 255, 255, 0.40);
+
+$secondary-neutral-color: #1D2E37;
+$secondary-neutral-color60: #1D2E3799;
+
+$error-color: #F84747;
+
+$services-gray: #E8EAEB;
+$higlight-color: #F5F4F9;
+
+$extrahighlight-color: #FCFBFD;
+
+$catalog-sidebar-width: 284px;
+
+$content-min-height: 500px;
+
+$mobileNavHeight: 55px;
+
+// header/constants.ts
+$headerHeight: 144px;
+$compactHeaderHeight: 88px;
+$mobleHeaderHeight: 56px;
+$defaultTransitionMs: 300ms;
+$headerStickyBannerHeigth: 48px;
+$headerInstallBannerHeight: 52px;
+
+// share pane with breadcrumbs
+$stickyCompactPaneHeight: 66px;
+$stickyPaneHeight: 90px;
+
+$body-bg: #fff;
+
+// text
+$text-color-primary: #1B1B1B;
+
+// Inputs
+
+$areaHeight: 58px;
+$inputHeight: 46px;
+$simpleInputHeight: 56px;
+
+// Кнопки пагинации в карусели
+
+$carouselArrowSize: 84px;

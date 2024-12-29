@@ -1,0 +1,46 @@
+@import "@/ui/themes/config.scss";
+
+
+.header {
+  height: 56px;
+  padding: 16px 0 0 0;
+}
+
+.popupContainer {
+  z-index: $z-prior;
+
+  >div {
+    margin-left: -8px;
+    transform: translateX(8px);
+  }
+
+  p,
+  svg {
+    color: #fff !important;
+  }
+}
+
+.popup {
+  min-width: 194px;
+  max-height: 550px;
+  padding: 8px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: $primary-color;
+  box-shadow: none;
+
+  &:not(.noMaxWidth) {
+    max-width: 284px;
+  }
+}
+
+.mobileHeaderWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.arrow {
+  z-index: $z-minor;
+}

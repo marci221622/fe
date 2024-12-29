@@ -1,0 +1,42 @@
+@import '@/ui/themes/config.scss';
+
+.listTitle {
+	@include title();
+	font-size: 15px;
+	text-transform: uppercase;
+	margin-bottom: 12px;
+}
+
+.list {
+	margin-bottom: 20px;
+}
+
+.authForm {
+	border: 1px solid $higlight-color;
+	border-radius: 16px;
+	padding: 16px;
+	margin-bottom: 28px;
+}
+
+.logoutBtn {}
+
+.orders {
+	@include hide-scroll();
+	flex-wrap: nowrap;
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+.container {
+	margin-bottom: 16px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pageTitle {
+	margin-bottom: 20px;
+}
+
+.widgets {
+	padding-bottom: 26px;
+}

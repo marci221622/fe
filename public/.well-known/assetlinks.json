@@ -1,0 +1,25 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ru.tsum.collect",
+      "sha256_cert_fingerprints": [
+        "E6:FB:FC:59:8D:F5:34:58:AC:73:29:E1:63:59:9C:28:0F:F9:BE:E4:30:CF:93:A2:AA:EB:57:CA:3C:23:54:90",
+        "A4:C3:F4:7E:DF:6D:61:4C:10:CF:03:25:37:93:74:FC:36:9F:35:50:41:2B:60:76:6B:9F:B0:0E:F7:C3:24:C7",
+        "9C:42:79:48:A2:7F:3A:D7:D9:A2:FF:45:2D:05:F0:08:1D:C6:B6:95:99:96:EF:1B:A3:DF:0C:8F:A0:55:22:4C"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "ru.tsum.collect.debug",
+      "sha256_cert_fingerprints": [
+        "E6:FB:FC:59:8D:F5:34:58:AC:73:29:E1:63:59:9C:28:0F:F9:BE:E4:30:CF:93:A2:AA:EB:57:CA:3C:23:54:90",
+        "A4:C3:F4:7E:DF:6D:61:4C:10:CF:03:25:37:93:74:FC:36:9F:35:50:41:2B:60:76:6B:9F:B0:0E:F7:C3:24:C7"
+      ]
+    }
+  }
+]

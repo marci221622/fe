@@ -1,0 +1,73 @@
+@import '@/ui/themes/config.scss';
+
+.pageTitle,
+.title {
+	font-family: 'TSUM Lenta';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 120%;
+	letter-spacing: 1.2px;
+	text-transform: uppercase;
+	text-align: center;
+	color: $text-color-primary;
+	margin-bottom: 28px;
+
+	@include desktop() {
+		font-size: 27px;
+	}
+
+	&.noMargin {
+		margin-bottom: 0px;
+	}
+
+	&.hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		border: 0;
+		padding: 0;
+		white-space: nowrap;
+		clip-path: inset(100%);
+		clip: rect(0 0 0 0);
+		overflow: hidden;
+	}
+}
+
+.pageTitle {
+	word-break: break-word;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	font-size: 17px;
+	margin-bottom: 0px;
+}
+
+.paragraph {
+	color: $text-color-primary;
+	font-family: 'Geometria';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+
+	&.bold {
+		font-weight: bold;
+	}
+
+	&.medium {
+		font-size: 15px;
+	}
+
+	&.underline {
+		text-decoration: underline;
+	}
+
+	&.center {
+		text-align: center;
+	}
+}

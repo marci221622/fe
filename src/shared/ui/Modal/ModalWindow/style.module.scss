@@ -1,0 +1,89 @@
+@import '@/ui/themes/config.scss';
+
+$mobileModalMaxWidth: 94%;
+$desktopModalMaxWidth: 384px;
+
+.rmOverlay {
+  transition: opacity 300ms ease-in-out;
+  opacity: 0;
+  display: none;
+
+  &:global(.ReactModal__Overlay--after-open) {
+    z-index: $z-prior;
+    opacity: 1;
+  }
+
+  &:global(.ReactModal__Overlay--before-close) {
+    opacity: 0;
+  }
+
+  &.visibility {
+    display: flex;
+  }
+
+  &.index-1 {
+    &:global(.ReactModal__Overlay--after-open) {
+      z-index: $z-prior + 1;
+    }
+  }
+
+  &.index-2 {
+    &:global(.ReactModal__Overlay--after-open) {
+      z-index: $z-prior + 2;
+    }
+  }
+}
+
+.rmContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: $mobileModalMaxWidth;
+  outline: none;
+  height: auto;
+  align-self: center;
+
+  @include desktop() {
+    width: $desktopModalMaxWidth;
+  }
+
+  &.fullScreen {
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+:global(.ReactModal__Content--after-open) {
+  :local(.content) {
+    transform: scale(1);
+  }
+}
+
+:global(.ReactModal__Content--before-close) {
+  :local(.content) {
+    transform: scale(.5);
+  }
+}
+
+.content {
+  border: 0;
+  border-radius: 16px;
+  width: 100%;
+  background-color: white;
+  transform: scale(.5);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.32, 1.18);
+
+  @include desktop() {
+    border-radius: 20px;
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0px;
+  z-index: $z-minor;
+  background-color: #fff;
+}

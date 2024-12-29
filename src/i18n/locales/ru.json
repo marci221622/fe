@@ -1,0 +1,1272 @@
+{
+  "Email": {
+    "translation": "Email",
+    "origin": [
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        109
+      ],
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        146
+      ]
+    ],
+    "extractedComments": []
+  },
+  "TSUM Collect": {
+    "translation": "TSUM Collect",
+    "origin": [
+      [
+        "src/shared/InstallAppBanner/View.tsx",
+        52
+      ]
+    ],
+    "extractedComments": []
+  },
+  "{0}": {
+    "translation": "{0}",
+    "origin": [
+      [
+        "src/features/auth/AuthModal/CodeInput.tsx",
+        84
+      ]
+    ],
+    "extractedComments": []
+  },
+  "{0} <0>{1}</0>": {
+    "translation": "{0} <0>{1}</0>",
+    "origin": [
+      [
+        "src/features/auth/AuthModal/CodeInput.tsx",
+        93
+      ]
+    ],
+    "extractedComments": []
+  },
+  "{allCounter, plural, one {# вещь} few {# вещи} other {# вещей}}": {
+    "translation": "{allCounter, plural, one {# вещь} few {# вещи} other {# вещей}}",
+    "origin": [
+      [
+        "src/features/customer/WidgetBlock/FavoriteProductList/FavoriteProductList.tsx",
+        31
+      ]
+    ],
+    "extractedComments": []
+  },
+  "{counter, plural, one {# товар} few {# товара} other {# товаров}}": {
+    "translation": "{counter, plural, one {# товар} few {# товара} other {# товаров}}",
+    "origin": [
+      [
+        "src/features/catalog/ProductCounter/Counter.tsx",
+        11
+      ]
+    ],
+    "extractedComments": []
+  },
+  "{productsCounter, plural, one {# товар} few {# товара} other {# товаров}}": {
+    "translation": "{productsCounter, plural, one {# товар} few {# товара} other {# товаров}}",
+    "origin": [
+      [
+        "src/features/catalog/Filters/BrandsFilter/Content.tsx",
+        155
+      ],
+      [
+        "src/features/catalog/Filters/MultiSelect/Content.tsx",
+        100
+      ],
+      [
+        "src/features/catalog/Filters/Price/Content.tsx",
+        192
+      ]
+    ],
+    "extractedComments": []
+  },
+  "{selectedProductsCounter, plural, one {вещь} few {вещи} other {вещей}}": {
+    "translation": "{selectedProductsCounter, plural, one {вещь} few {вещи} other {вещей}}",
+    "origin": [
+      [
+        "src/features/basket/Summary/Desktop.tsx",
+        67
+      ],
+      [
+        "src/features/basket/Summary/Desktop.tsx",
+        142
+      ],
+      [
+        "src/features/basket/Summary/Mobile.tsx",
+        64
+      ],
+      [
+        "src/features/basket/Summary/MultyClickAndColectSummary/View.tsx",
+        45
+      ]
+    ],
+    "extractedComments": []
+  },
+  "© ООО «Меркури Мода», {0}": {
+    "translation": "© ООО «Меркури Мода», {0}",
+    "origin": [
+      [
+        "src/features/footer/View.tsx",
+        203
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Артикул": {
+    "translation": "Артикул",
+    "origin": [
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        60
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Бренды": {
+    "translation": "Бренды",
+    "origin": [
+      [
+        "src/features/header/Navbar/Desktop.tsx",
+        59
+      ],
+      [
+        "src/features/header/Navbar/Mobile.tsx",
+        88
+      ]
+    ],
+    "extractedComments": []
+  },
+  "В корзине нет товаров в наличии": {
+    "translation": "В корзине нет товаров в наличии",
+    "origin": [
+      [
+        "src/pages/Basket/Desktop/Products.tsx",
+        102
+      ]
+    ],
+    "extractedComments": []
+  },
+  "В корзине нет товаров доступных для покупки.": {
+    "translation": "В корзине нет товаров доступных для покупки.",
+    "origin": [
+      [
+        "src/pages/Basket/MobileTemplate.tsx",
+        145
+      ]
+    ],
+    "extractedComments": []
+  },
+  "В корзину": {
+    "translation": "В корзину",
+    "origin": [
+      [
+        "src/features/product/CommonActions/CommonActions.tsx",
+        195
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Введите Email": {
+    "translation": "Введите Email",
+    "origin": [
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        147
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Введите имя": {
+    "translation": "Введите имя",
+    "origin": [
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        125
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Введите фамилию": {
+    "translation": "Введите фамилию",
+    "origin": [
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        126
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Вернуться на главную": {
+    "translation": "Вернуться на главную",
+    "origin": [
+      [
+        "src/pages/Errors/error404/Page.tsx",
+        23
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Возврат": {
+    "translation": "Возврат",
+    "origin": [
+      [
+        "src/features/footer/info.ts",
+        40
+      ],
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        90
+      ],
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        95
+      ],
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        103
+      ],
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        108
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Войти": {
+    "translation": "Войти",
+    "origin": [
+      [
+        "src/features/header/DesktopHeader.tsx",
+        154
+      ],
+      [
+        "src/features/header/DesktopHeader.tsx",
+        195
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Вопросы и ответы": {
+    "translation": "Вопросы и ответы",
+    "origin": [
+      [
+        "src/features/footer/info.ts",
+        32
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Все бренды": {
+    "translation": "Все бренды",
+    "origin": [
+      [
+        "src/features/brands/FavoriteBrandsModal/FavoriteBrandsModal.tsx",
+        69
+      ],
+      [
+        "src/pages/Brands/page.tsx",
+        141
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Вы недавно смотрели": {
+    "translation": "Вы недавно смотрели",
+    "origin": [
+      [
+        "src/features/header/Suggests/LastViewedWidget.tsx",
+        41
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Вы перешли по неправильной ссылке или страница была удалена.": {
+    "translation": "Вы перешли по неправильной ссылке или страница была удалена.",
+    "origin": [
+      [
+        "src/pages/Errors/error404/Page.tsx",
+        20
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Выберите дату и время доставки": {
+    "translation": "Выберите дату и время доставки",
+    "origin": [
+      [
+        "src/features/basket/checkout/Delivery/View.tsx",
+        136
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Гарантия подлинности": {
+    "translation": "Гарантия подлинности",
+    "origin": [
+      [
+        "src/features/footer/info.ts",
+        31
+      ],
+      [
+        "src/shared/description-modals/GarantiModal/View.tsx",
+        22
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Данные карты указаны неверно": {
+    "translation": "Данные карты указаны неверно",
+    "origin": [
+      [
+        "src/shared/payments/Widget.tsx",
+        46
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Для оплаты заказа, пожалуйста, укажите CVV код, расположенный на обратной стороне вашей карты.": {
+    "translation": "Для оплаты заказа, пожалуйста, укажите CVV код, расположенный на обратной стороне вашей карты.",
+    "origin": [
+      [
+        "src/shared/payments/Widget.tsx",
+        154
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Для оформления бронирования укажите номер телефона": {
+    "translation": "Для оформления бронирования укажите номер телефона",
+    "origin": [
+      [
+        "src/features/auth/AuthModal/View.tsx",
+        48
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Добавить промокод": {
+    "translation": "Добавить промокод",
+    "origin": [
+      [
+        "src/features/basket/cart/Promocode/View.tsx",
+        40
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Добавлен в корзину": {
+    "translation": "Добавлен в корзину",
+    "origin": [
+      [
+        "src/features/header/AddedToCartPopup/Popup.tsx",
+        31
+      ],
+      [
+        "src/features/header/AddedToCartPopup/Popup.tsx",
+        78
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Доставка": {
+    "translation": "Доставка",
+    "origin": [
+      [
+        "src/features/footer/info.ts",
+        39
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Избранное": {
+    "translation": "Избранное",
+    "origin": [
+      [
+        "src/features/header/Navbar/Mobile.tsx",
+        101
+      ],
+      [
+        "src/pages/Favorite/Brands/page.tsx",
+        56
+      ],
+      [
+        "src/pages/Favorite/Products/page.tsx",
+        71
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Имя": {
+    "translation": "Имя",
+    "origin": [
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        88
+      ],
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        125
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Информация": {
+    "translation": "Информация",
+    "origin": [
+      [
+        "src/shared/description-modals/DescriptionModal/View.tsx",
+        133
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Каталог": {
+    "translation": "Каталог",
+    "origin": [
+      [
+        "src/features/header/Navbar/Mobile.tsx",
+        93
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Категории": {
+    "translation": "Категории",
+    "origin": [
+      [
+        "src/features/header/Navbar/CategoryContent/View.tsx",
+        55
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Комплект": {
+    "translation": "Комплект",
+    "origin": [
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        36
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Корзина": {
+    "translation": "Корзина",
+    "origin": [
+      [
+        "src/pages/Basket/page.tsx",
+        107
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Купить выбранную вещь": {
+    "translation": "Купить выбранную вещь",
+    "origin": [
+      [
+        "src/features/basket/Actions/CommonActions/View.tsx",
+        88
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Купить выбранные вещи": {
+    "translation": "Купить выбранные вещи",
+    "origin": [
+      [
+        "src/features/basket/Actions/CommonActions/View.tsx",
+        89
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Личном кабинете": {
+    "translation": "Личном кабинете",
+    "origin": [
+      [
+        "src/pages/ThanksPage/page.tsx",
+        48
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Мобильное приложение": {
+    "translation": "Мобильное приложение",
+    "origin": [
+      [
+        "src/shared/InstallAppBanner/View.tsx",
+        54
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Мои данные": {
+    "translation": "Мои данные",
+    "origin": [
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        82
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Мои заказы": {
+    "translation": "Мои заказы",
+    "origin": [
+      [
+        "src/pages/Profile/Orders/page.tsx",
+        104
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Мы в Telegram": {
+    "translation": "Мы в Telegram",
+    "origin": [
+      [
+        "src/features/footer/View.tsx",
+        193
+      ],
+      [
+        "src/features/footer/View.tsx",
+        212
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Мы отправили СМС с кодом для подтверждения <0/> на номер <1>{0}</1>": {
+    "translation": "Мы отправили СМС с кодом для подтверждения <0/> на номер <1>{0}</1>",
+    "origin": [
+      [
+        "src/features/auth/AuthModal/CodeInput.tsx",
+        88
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Мы отправим Вам СМС с кодом для входа в личный кабинет": {
+    "translation": "Мы отправим Вам СМС с кодом для входа в личный кабинет",
+    "origin": [
+      [
+        "src/features/auth/AuthModal/View.tsx",
+        117
+      ]
+    ],
+    "extractedComments": []
+  },
+  "На данный момент вы не добавили ни одного товара в корзину": {
+    "translation": "На данный момент вы не добавили ни одного товара в корзину",
+    "origin": [
+      [
+        "src/pages/Basket/Desktop/Template.tsx",
+        67
+      ],
+      [
+        "src/pages/Basket/MobileTemplate.tsx",
+        109
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Найти бренд": {
+    "translation": "Найти бренд",
+    "origin": [
+      [
+        "src/features/brands/FavoriteBrandsModal/FavoriteBrandsModal.tsx",
+        76
+      ],
+      [
+        "src/features/catalog/Filters/BrandsFilter/Content.tsx",
+        94
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Не удалось оплатить заказ. Повторите попытку": {
+    "translation": "Не удалось оплатить заказ. Повторите попытку",
+    "origin": [
+      [
+        "src/shared/payments/Widget.tsx",
+        121
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Невыбранные товары": {
+    "translation": "Невыбранные товары",
+    "origin": [
+      [
+        "src/pages/Basket/Desktop/Products.tsx",
+        117
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Недавно искали": {
+    "translation": "Недавно искали",
+    "origin": [
+      [
+        "src/features/header/Suggests/View.tsx",
+        182
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Нет в наличии": {
+    "translation": "Нет в наличии",
+    "origin": [
+      [
+        "src/pages/Basket/Desktop/Products.tsx",
+        125
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Новая банковская карта": {
+    "translation": "Новая банковская карта",
+    "origin": [
+      [
+        "src/shared/payments/SavedCards.tsx",
+        70
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Номер телефона": {
+    "translation": "Номер телефона",
+    "origin": [
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        137
+      ]
+    ],
+    "extractedComments": []
+  },
+  "О tsum collect": {
+    "translation": "О tsum collect",
+    "origin": [
+      [
+        "src/features/footer/info.ts",
+        29
+      ]
+    ],
+    "extractedComments": []
+  },
+  "О товаре": {
+    "translation": "О товаре",
+    "origin": [
+      [
+        "src/features/product/Templates/Desktop/FullInfo.tsx",
+        32
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Описание": {
+    "translation": "Описание",
+    "origin": [
+      [
+        "src/features/product/Templates/Desktop/FullInfo.tsx",
+        37
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Оплата": {
+    "translation": "Оплата",
+    "origin": [
+      [
+        "src/features/footer/info.ts",
+        38
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Оплатить": {
+    "translation": "Оплатить",
+    "origin": [
+      [
+        "src/shared/payments/Widget.tsx",
+        166
+      ],
+      [
+        "src/shared/payments/Widget.tsx",
+        216
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Оплатить банковской картой": {
+    "translation": "Оплатить банковской картой",
+    "origin": [
+      [
+        "src/features/basket/Actions/CommonActions/View.tsx",
+        96
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Особенности": {
+    "translation": "Особенности",
+    "origin": [
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        23
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Отменить промокод": {
+    "translation": "Отменить промокод",
+    "origin": [
+      [
+        "src/features/basket/cart/Promocode/Modal.tsx",
+        76
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Отсканируйте QR-код, чтобы установить приложение": {
+    "translation": "Отсканируйте QR-код, чтобы установить приложение",
+    "origin": [
+      [
+        "src/features/footer/View.tsx",
+        91
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Очистить": {
+    "translation": "Очистить",
+    "origin": [
+      [
+        "src/features/header/Suggests/View.tsx",
+        184
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Перейти в избранное": {
+    "translation": "Перейти в избранное",
+    "origin": [
+      [
+        "src/pages/Basket/Desktop/Products.tsx",
+        105
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Перейти в каталог": {
+    "translation": "Перейти в каталог",
+    "origin": [
+      [
+        "src/features/product/CommonActions/CommonActions.tsx",
+        154
+      ],
+      [
+        "src/pages/Basket/Desktop/Products.tsx",
+        109
+      ],
+      [
+        "src/pages/Basket/MobileTemplate.tsx",
+        134
+      ],
+      [
+        "src/pages/Profile/Orders/page.tsx",
+        133
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Перейти в корзину": {
+    "translation": "Перейти в корзину",
+    "origin": [
+      [
+        "src/features/header/AddedToCartPopup/View.tsx",
+        97
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Перейти к информации о товаре": {
+    "translation": "Перейти к информации о товаре",
+    "origin": [
+      [
+        "src/features/product/Templates/Desktop/ShortInfo.tsx",
+        120
+      ]
+    ],
+    "extractedComments": []
+  },
+  "По Вашему запросу ничего не найдено.<0/> Для поиска интересующего Вас бренда воспользуйтесь поиском по алфавиту": {
+    "translation": "По Вашему запросу ничего не найдено.<0/> Для поиска интересующего Вас бренда воспользуйтесь поиском по алфавиту",
+    "origin": [
+      [
+        "src/pages/Brands/page.tsx",
+        214
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Подробнее": {
+    "translation": "Подробнее",
+    "origin": [
+      [
+        "src/features/product/Templates/Desktop/FullInfo.tsx",
+        56
+      ],
+      [
+        "src/features/product/Templates/Desktop/FullInfo.tsx",
+        67
+      ],
+      [
+        "src/features/product/Templates/Mobile/Info.tsx",
+        43
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Подтвердить номер телефона": {
+    "translation": "Подтвердить номер телефона",
+    "origin": [
+      [
+        "src/features/auth/AuthModal/View.tsx",
+        111
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Поиск по каталогу": {
+    "translation": "Поиск по каталогу",
+    "origin": [
+      [
+        "src/features/header/Header.tsx",
+        91
+      ],
+      [
+        "src/features/header/Suggests/View.tsx",
+        159
+      ],
+      [
+        "src/pages/Categories/Collection/Page.tsx",
+        38
+      ],
+      [
+        "src/pages/Categories/Root/Mobile.tsx",
+        31
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Показать": {
+    "translation": "Показать",
+    "origin": [
+      [
+        "src/features/catalog/Filters/BrandsFilter/Content.tsx",
+        154
+      ],
+      [
+        "src/features/catalog/Filters/MultiSelect/Content.tsx",
+        99
+      ],
+      [
+        "src/features/catalog/Filters/Price/Content.tsx",
+        191
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Показать больше товаров": {
+    "translation": "Показать больше товаров",
+    "origin": [
+      [
+        "src/features/catalog/LoadMore/useLoadMore.tsx",
+        38
+      ],
+      [
+        "src/pages/Categories/Root/Desktop.tsx",
+        113
+      ],
+      [
+        "src/pages/Favorite/Products/useLoadMore.tsx",
+        39
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Показать все": {
+    "translation": "Показать все",
+    "origin": [
+      [
+        "src/features/catalog/MobileCategories/Category/Content.tsx",
+        110
+      ],
+      [
+        "src/features/catalog/MobileCategories/Filter/Content.tsx",
+        114
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Покупателям": {
+    "translation": "Покупателям",
+    "origin": [
+      [
+        "src/features/footer/info.ts",
+        36
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Политика конфиденциальности": {
+    "translation": "Политика конфиденциальности",
+    "origin": [
+      [
+        "src/features/footer/View.tsx",
+        208
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Пользовательское соглашение": {
+    "translation": "Пользовательское соглашение",
+    "origin": [
+      [
+        "src/features/footer/View.tsx",
+        205
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Применить промокод": {
+    "translation": "Применить промокод",
+    "origin": [
+      [
+        "src/features/basket/cart/Promocode/Modal.tsx",
+        76
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Продавцам": {
+    "translation": "Продавцам",
+    "origin": [
+      [
+        "src/features/footer/info.ts",
+        47
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Продать": {
+    "translation": "Продать",
+    "origin": [
+      [
+        "src/features/header/Navbar/Mobile.tsx",
+        110
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Продать вещь": {
+    "translation": "Продать вещь",
+    "origin": [
+      [
+        "src/features/footer/info.ts",
+        49
+      ],
+      [
+        "src/features/header/DesktopHeader.tsx",
+        148
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Продолжить покупки": {
+    "translation": "Продолжить покупки",
+    "origin": [
+      [
+        "src/features/header/AddedToCartPopup/View.tsx",
+        85
+      ],
+      [
+        "src/pages/ThanksPage/page.tsx",
+        60
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Произошла ошибка, повторите попытку позже": {
+    "translation": "Произошла ошибка, повторите попытку позже",
+    "origin": [
+      [
+        "src/features/auth/AuthModal/View.tsx",
+        145
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Профиль": {
+    "translation": "Профиль",
+    "origin": [
+      [
+        "src/features/header/Navbar/Mobile.tsx",
+        116
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Размер": {
+    "translation": "Размер",
+    "origin": [
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        28
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Сбросить": {
+    "translation": "Сбросить",
+    "origin": [
+      [
+        "src/features/catalog/Filters/Filters.tsx",
+        75
+      ],
+      [
+        "src/features/catalog/Filters/Pane/Popup/Popup.tsx",
+        87
+      ],
+      [
+        "src/features/catalog/Filters/Pane/Popup/Popup.tsx",
+        140
+      ],
+      [
+        "src/features/catalog/MobileCategories/Category/Content.tsx",
+        88
+      ],
+      [
+        "src/features/catalog/MobileCategories/Filter/Content.tsx",
+        88
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Скачать": {
+    "translation": "Скачать",
+    "origin": [
+      [
+        "src/shared/InstallAppBanner/View.tsx",
+        59
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Состав": {
+    "translation": "Состав",
+    "origin": [
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        40
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Состояние": {
+    "translation": "Состояние",
+    "origin": [
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        16
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Сохранить данные": {
+    "translation": "Сохранить данные",
+    "origin": [
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        32
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Спасибо за заявку": {
+    "translation": "Спасибо за заявку",
+    "origin": [
+      [
+        "src/pages/Landings/Landing/SellerForm/View.tsx",
+        105
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Спасибо за покупку": {
+    "translation": "Спасибо за покупку",
+    "origin": [
+      [
+        "src/pages/ThanksPage/page.tsx",
+        36
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Страна дизайна": {
+    "translation": "Страна дизайна",
+    "origin": [
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        54
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Страна производства": {
+    "translation": "Страна производства",
+    "origin": [
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        48
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Страница не найдена": {
+    "translation": "Страница не найдена",
+    "origin": [
+      [
+        "src/pages/Errors/error404/Page.tsx",
+        18
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Топ бренды": {
+    "translation": "Топ бренды",
+    "origin": [
+      [
+        "src/features/header/Navbar/CategoryContent/View.tsx",
+        56
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Удалить": {
+    "translation": "Удалить",
+    "origin": [
+      [
+        "src/pages/Basket/Desktop/Products.tsx",
+        134
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Удалить все": {
+    "translation": "Удалить все",
+    "origin": [
+      [
+        "src/pages/Basket/Desktop/Products.tsx",
+        134
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Уже в корзине": {
+    "translation": "Уже в корзине",
+    "origin": [
+      [
+        "src/features/product/CommonActions/ClickOrAddToCartModal/ClickOrAddToCartModal.tsx",
+        66
+      ],
+      [
+        "src/features/product/CommonActions/CommonActions.tsx",
+        191
+      ],
+      [
+        "src/pages/Favorite/Products/Actions.tsx",
+        75
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Фамилия": {
+    "translation": "Фамилия",
+    "origin": [
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        89
+      ],
+      [
+        "src/pages/Profile/Contacts/page.tsx",
+        126
+      ]
+    ],
+    "extractedComments": []
+  },
+  "Цвет": {
+    "translation": "Цвет",
+    "origin": [
+      [
+        "src/features/product/Templates/InfoList/transformers.tsx",
+        44
+      ]
+    ],
+    "extractedComments": []
+  },
+  "женское": {
+    "translation": "женское",
+    "origin": [
+      [
+        "src/features/header/DesktopHeader.tsx",
+        106
+      ]
+    ],
+    "extractedComments": []
+  },
+  "информация": {
+    "translation": "информация",
+    "origin": [
+      [
+        "src/pages/Profile/Info/MobileTemplate.tsx",
+        33
+      ]
+    ],
+    "extractedComments": []
+  },
+  "мужское": {
+    "translation": "мужское",
+    "origin": [
+      [
+        "src/features/header/DesktopHeader.tsx",
+        116
+      ]
+    ],
+    "extractedComments": []
+  },
+  "наше приложение": {
+    "translation": "наше приложение",
+    "origin": [
+      [
+        "src/features/footer/View.tsx",
+        90
+      ]
+    ],
+    "extractedComments": []
+  },
+  "укажите номер телефона": {
+    "translation": "укажите номер телефона",
+    "origin": [
+      [
+        "src/pages/Login/page.tsx",
+        40
+      ],
+      [
+        "src/pages/Profile/Main/DesktopTemplate.tsx",
+        65
+      ]
+    ],
+    "extractedComments": []
+  }
+}

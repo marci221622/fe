@@ -1,0 +1,74 @@
+@import "@/ui/themes/config.scss";
+
+
+.paginationWrapper {
+  display: flex;
+  font-size: 13px;
+}
+
+.prevBtn,
+.numberBtn,
+.nextBtn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include desktop() {
+    margin-right: 16px;
+  }
+}
+
+.prevBtn,
+.nextBtn {
+  border-radius: 6px;
+  border: solid 1px $primary-color;
+
+  svg,
+  path {
+    fill: $primary-color;
+  }
+
+  &.disable {
+    opacity: 0.24;
+    cursor: initial;
+  }
+}
+
+.prevBtn {
+  svg {
+    transform: rotate(90deg);
+  }
+}
+
+.nextBtn {
+  svg {
+    transform: rotate(-90deg);
+  }
+}
+
+.numberBtn {
+  line-height: 1em;
+  text-decoration: none;
+  color: $text-color-primary;
+
+  &.active {
+    color: #FFF;
+    border-radius: 6px;
+    border: solid 1px $primary-color;
+    background-color: $primary-color;
+    padding: 0px 13px;
+    width: auto;
+  }
+
+  &.dots {
+    cursor: initial;
+  }
+}

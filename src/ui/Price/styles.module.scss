@@ -1,0 +1,121 @@
+@import '@/ui/themes/config.scss';
+
+.price {
+  @include caption('small');
+
+  display: flex;
+  justify-content: center;
+  color: $text-color-primary;
+  z-index: 2;
+
+  &.withLineThrought {
+    text-decoration: line-through;
+  }
+
+  span:not([data-discount="true"]) {
+    text-align: center;
+  }
+
+  &.alignRight {
+    span:not([data-discount="true"]) {
+      text-align: right;
+    }
+  }
+
+  @include desktop() {
+    justify-content: flex-start;
+    font-size: 15px;
+
+    &.large {
+      font-size: 18px;
+    }
+  }
+
+  .discount {
+    color: $secondary-color;
+    margin-left: 5px;
+    min-height: 20px;
+  }
+
+  .hasDiscount {
+    text-decoration: line-through;
+  }
+
+  .discountPercent {
+    display: flex;
+    width: fit-content;
+    align-self: center;
+    margin-left: 14px;
+    font-size: 8px;
+    font-weight: bold;
+    background-color: $primary-color;
+    color: #fff;
+    border-radius: 3px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 17px;
+    padding: 0px 3px;
+    text-transform: uppercase;
+    padding-top: 1px;
+    padding-left: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 15px;
+      height: 100%;
+      background: url('./rectangle.svg') no-repeat left center;
+      background-size: contain;
+      width: 15px;
+      left: -5px;
+      z-index: -1;
+    }
+
+    @include desktop() {
+      font-size: 10px;
+      height: 20px;
+    }
+  }
+
+  &.vertical {
+    flex-direction: column;
+  }
+
+  &.discountBelow {
+    flex-direction: column;
+
+    .discountPercent {
+      margin-left: 0px;
+    }
+  }
+
+  &.discountBelowOnMobile {
+    flex-direction: column;
+
+    .discountPercent {
+      margin-left: 0px;
+    }
+
+    @include desktop() {
+      flex-direction: row;
+
+      .discountPercent {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &.boldWeight {
+    font-weight: 500;
+  }
+}
+
+.verticalPriceAlignmentContainer {
+  flex-direction: column;
+
+  .verticalPriceAlignmentDiscountPrice {
+    margin: 0;
+  }
+}

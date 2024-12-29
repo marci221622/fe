@@ -1,0 +1,92 @@
+@import '@/ui/themes/config.scss';
+
+.breadcrumbs {
+	display: flex;
+	visibility: hidden;
+
+	@include desktop() {
+		height: 40px;
+		visibility: visible;
+		align-items: center;
+
+		&.empty {
+			height: 0;
+			margin-top: 0;
+		}
+	}
+
+	.dot {
+		padding: 0px 10px;
+		display: flex;
+		align-items: center;
+	}
+
+	li {
+		display: flex;
+		align-items: center;
+	}
+
+	a,
+	li,
+	p {
+		color: $text-color-primary;
+		font-size: 12px;
+		font-family: 'Geometria';
+		font-weight: 400;
+	}
+}
+
+.pane {
+	display: none;
+	position: sticky;
+	bottom: $mobileNavHeight;
+	z-index: 1;
+	grid-area: pane;
+	justify-content: space-between;
+	padding: 8px 0px;
+	padding-bottom: max(env(safe-area-inset-bottom, 8px), 8px);
+	transition: all 0.3s;
+	background-color: #fff;
+	margin-top: 40px;
+
+	&.bottom {
+		bottom: 0px;
+	}
+
+	ul {
+		display: none;
+		height: 100%;
+
+		@include desktop() {
+			display: flex;
+		}
+	}
+
+	@include desktop() {
+		height: 90px;
+		bottom: 0;
+		z-index: $z-minor;
+		display: grid;
+		padding: 8px;
+		padding-bottom: 16px;
+		grid-template-columns: minmax(max-content, 784px) 384px;
+		gap: 32px;
+
+		&.compact {
+			height: 58px;
+		}
+	}
+
+	&.noMargin {
+		margin-top: 0px
+	}
+
+	&.noPadding {
+		padding: 0;
+	}
+
+	&.nosticky {
+		position: relative;
+		bottom: auto;
+	}
+}

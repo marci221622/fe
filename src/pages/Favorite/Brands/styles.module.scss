@@ -1,0 +1,75 @@
+@import '@/ui/themes/config.scss';
+
+.pageTitle {
+	margin-bottom: 0px
+}
+
+.filters {
+	margin-bottom: 26px;
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+.favoritePageWrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+	grid-template-areas:
+		"links"
+		"sidebar"
+		"content";
+	margin-top: 16px;
+	align-items: flex-start;
+	gap: 0px 32px;
+
+	&.notabs {
+		grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+		grid-template-rows: 48px auto;
+		grid-template-areas:
+			"links"
+			"content";
+	}
+
+	@include desktop() {
+		grid-template-columns: $catalog-sidebar-width repeat(auto-fit, minmax(calc(100% - $catalog-sidebar-width - 32px), 1fr));
+		grid-template-rows: 48px auto;
+		grid-template-areas:
+			"links links"
+			"sidebar content";
+	}
+}
+
+.catalog {
+	grid-area: content;
+	margin-top: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	@include desktop() {
+		margin-top: 24px;
+	}
+
+	&.isEmpty {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+		flex-direction: column;
+	}
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
+
+.links {
+	grid-area: links;
+}
+
+.emptyText {
+	margin-top: 64px;
+
+	@include desktop() {
+		white-space: pre-wrap;
+	}
+}

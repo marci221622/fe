@@ -1,0 +1,91 @@
+@import '@/ui/themes/config.scss';
+
+.header {
+	display: flex;
+	justify-content: center;
+
+	.shortLogin {
+		@include caption();
+		text-transform: none;
+		font-size: 12px;
+		text-decoration: underline;
+		position: absolute;
+		right: 16px;
+		cursor: pointer;
+	}
+}
+
+.failedContent {
+	text-align: center;
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+.resultContent {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+	@include desktop() {
+		justify-content: flex-start;
+		height: auto;
+		gap: 16px;
+	}
+
+	.link {
+		text-decoration: underline;
+	}
+
+	.additionalText {
+		text-align: center;
+	}
+
+	.infoWrapper {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 20px;
+		margin-top: auto;
+
+		@include desktop() {
+			margin-top: 0;
+		}
+	}
+
+	button {
+		width: 100%;
+		margin-top: auto;
+
+		@include desktop() {
+			width: auto;
+			margin-top: 0;
+		}
+	}
+
+	.title {
+		display: block;
+
+		@include desktop() {
+			display: none;
+		}
+	}
+}
+
+.deliveryDesclamer {
+	margin-top: 16px;
+}
+
+button.applicationLink {
+	width: fit-content;
+	align-self: center;
+	margin-top: -10px;
+}
+
+.description {
+	white-space: pre-wrap;
+}

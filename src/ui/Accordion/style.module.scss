@@ -1,0 +1,45 @@
+@import '@/ui/themes/config.scss';
+
+.container {
+  .disabled {
+    cursor: auto !important;
+  }
+
+  .panel {
+    box-shadow: inset 0px -1px 0px $higlight-color;
+
+    &:last-child {
+      box-shadow: none;
+    }
+
+    .title {
+      cursor: pointer;
+      padding: 16px 0;
+      font-weight: 400;
+      font-stretch: normal;
+      font-size: 13px;
+      line-height: 18px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .boldTitle {
+      font-weight: 700;
+    }
+
+    .content {
+      overflow: hidden;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    &.opened {
+      padding-bottom: 12px;
+      box-shadow: none;
+
+      .content {
+        opacity: 1;
+      }
+    }
+  }
+}

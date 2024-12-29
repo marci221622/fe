@@ -1,0 +1,25 @@
+@import "@/ui/themes/config.scss";
+
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%)
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: hsla(0, 0%, 100%, .84);
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	justify-content: center;
+	height: 100%;
+	z-index: $z-regular + 10;
+}

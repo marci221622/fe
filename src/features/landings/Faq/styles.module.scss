@@ -1,0 +1,39 @@
+@import "@/ui/themes/config.scss";
+
+
+.title {
+	display: none;
+
+	@include desktop() {
+		display: block;
+		font-size: 25px;
+	}
+}
+
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+
+	@include desktop() {
+		display: grid;
+		grid-template-columns: 416px 416px;
+		grid-gap: 15.8%;
+		justify-content: center;
+
+		&.onlyTab {
+			grid-template-columns: 1fr
+		}
+	}
+
+	p {
+		margin-bottom: 0.5rem;
+	}
+}
+
+.segments {
+	margin-bottom: 18px;
+
+	a {
+		flex: 1 1 auto;
+	}
+}

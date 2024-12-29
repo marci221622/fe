@@ -1,0 +1,38 @@
+@import '@/ui/themes/config.scss';
+
+.body {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-bottom: max(env(safe-area-inset-bottom, 16px), 16px);
+}
+
+.content {
+  position: fixed;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  z-index: $z-prior;
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.contentWBorderRadius {
+  border-radius: 16px 16px 0 0;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+}
+
+.modal {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $z-prior;
+}

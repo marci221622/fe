@@ -1,0 +1,52 @@
+@import '@/ui/themes/config.scss';
+
+.container {
+	background-color: #fff;
+}
+
+.wrapper {
+	@include templatePaddings();
+	max-width: $max-width-desktop;
+	margin: 0 auto;
+	background-color: #fff;
+	padding-top: 32px;
+	width: 100%;
+}
+
+.brands {
+	margin-top: 28px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 8px;
+
+	li {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+
+		a {
+			display: flex;
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	img {
+		max-height: 40px;
+	}
+}
+
+.brand {
+	margin-left: 0;
+}
+
+.seeAll {
+	padding: 48px 0px 32px 0px;
+	@include caption();
+	font-size: 14px;
+	text-decoration: underline;
+	display: block;
+	text-align: center;
+}

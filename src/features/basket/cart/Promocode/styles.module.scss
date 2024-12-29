@@ -1,0 +1,51 @@
+@import '@/ui/themes/config.scss';
+
+.promocode {
+  .text {
+    text-decoration: underline;
+    cursor: pointer;
+    max-width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &.hasCode {
+    p {
+      color: $secondary-color;
+    }
+  }
+}
+
+.notice {
+  font-size: 12px;
+
+  &.error {
+    color: $error-color;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.input {
+  border: 1px solid #1b1b1b;
+  border-radius: 6px;
+  height: 50px;
+
+  .stub {
+    font-weight: bold;
+
+    p {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &.hasPromocode {
+    .stub {
+      p {
+        margin-left: 38px;
+      }
+    }
+  }
+}

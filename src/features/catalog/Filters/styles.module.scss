@@ -1,0 +1,96 @@
+@import '@/ui/themes/config.scss';
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 100%;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  overflow-x: auto;
+  @include hide-scroll();
+  flex-wrap: nowrap;
+  // Фикс для ios кривого бордера
+  padding-bottom: 1px;
+  @include templatePaddings();
+  margin-left: -8px;
+  margin-right: -8px;
+
+  @include desktop() {
+    flex-wrap: wrap;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  &.categories {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+
+.filter {
+  padding: 7px;
+  font-family: 'Geometria';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  border: 0.5px solid $primary-color;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.lastFilterContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.resetBtn {
+  align-self: center;
+  height: 32px;
+  padding: 0;
+  padding-top: 4px;
+  line-height: normal;
+  color: $text-color-primary;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  visibility: hidden;
+
+  &.hasFilters {
+    visibility: visible;
+  }
+}
+
+.search {
+  fill: $primary-color;
+  cursor: pointer;
+  transition: transform $defaultTransitionMs ease;
+  // Больше чем высота фильтра в 2 раза
+  // Фильтры могут быть на 2 строки
+  transform: translateY(80px);
+  display: none;
+
+  @include desktop() {
+    display: block;
+  }
+
+  &.stucked {
+    transform: none;
+  }
+}

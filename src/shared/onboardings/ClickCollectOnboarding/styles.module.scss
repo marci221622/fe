@@ -1,0 +1,31 @@
+@import '@/ui/themes/config.scss';
+
+.popup {
+	z-index: $z-minor + 1;
+}
+
+.bodyWrapper {
+	background-color: $primary-color;
+	color: #fff;
+	max-width: 100%;
+
+	@include desktop() {
+		max-width: 284px;
+	}
+}
+
+.space {
+	align-items: center;
+	gap: 12px;
+
+	svg {
+		width: 24px;
+		height: 24px;
+		flex: 0 0 auto;
+		cursor: pointer;
+	}
+
+	p {
+		color: #fff;
+	}
+}

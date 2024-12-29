@@ -1,0 +1,26 @@
+@import '@/ui/themes/config.scss';
+
+.list {
+	display: flex;
+	justify-content: center;
+	flex: 1 1 auto;
+	gap: 13.5px;
+	flex-wrap: wrap;
+
+	@include desktop() {
+		gap: auto;
+		flex-wrap: nowrap;
+		height: 34px;
+		justify-content: space-between;
+	}
+
+	li {
+		@include caption();
+		font-size: 12px;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
+}

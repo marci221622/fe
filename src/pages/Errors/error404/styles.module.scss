@@ -1,0 +1,66 @@
+@import "@/ui/themes/config.scss";
+
+
+.wrap {
+	margin: 8px auto;
+	margin-bottom: 50px;
+
+	@include desktop() {
+		margin: 20px auto;
+		margin-bottom: 0;
+	}
+
+	width: 85%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	.title {
+		font-size: 17px;
+		line-height: 1.41;
+		letter-spacing: 1.2px;
+		color: #1b1b1b;
+		font-weight: normal;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 20px;
+		margin-top: 8px;
+	}
+
+	.code {
+		margin-bottom: 8px;
+		font-size: 80px;
+		font-family: Geometria, sans-serif;
+		font-weight: 500;
+		color: #1b1b1b;
+	}
+
+	.description,
+	.link {
+		font-size: 12px;
+		color: #1b1b1b;
+		line-height: 1.5;
+		letter-spacing: 0;
+		text-align: center;
+	}
+
+	.link {
+		color: $text-color-primary;
+		text-decoration: underline;
+	}
+
+	@include desktop() {
+		.title {
+			font-size: 31px;
+			color: #1b1b1b;
+			margin-bottom: 24px;
+			margin-top: 0;
+		}
+
+		.description,
+		.link {
+			font-size: 15px;
+		}
+	}
+}

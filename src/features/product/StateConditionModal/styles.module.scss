@@ -1,0 +1,48 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+
+	p {
+		font-weight: 700;
+		font-size: 15px;
+		margin-bottom: 16px;
+	}
+
+	ul {
+		list-style: inside;
+		margin-left: 9px;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	li {
+		@include caption();
+		font-size: 12px;
+
+		@include desktop() {
+			font-size: 13px;
+		}
+	}
+}
+
+.StateConditionModal {
+	min-width: 584px;
+}
+
+.disclamer {
+	@include caption();
+	font-size: 12px;
+	text-align: center;
+	padding: 16px;
+	border-radius: 6px;
+	border: 1px solid $higlight-color;
+
+	@include desktop() {
+		font-size: 14px;
+	}
+}

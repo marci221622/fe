@@ -1,0 +1,32 @@
+.slide {
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &>img {
+    object-fit: contain;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+  }
+
+  &.zoomedIn {
+    cursor: move;
+  }
+
+  &.zoomedOut {
+    cursor: zoom-in;
+  }
+}
+
+.zoomWrapper {
+  margin: 0 auto !important;
+  max-height: 100%;
+  height: 100%;
+
+  :global(.react-transform-component) {
+    height: 100%;
+  }
+}

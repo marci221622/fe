@@ -1,0 +1,13 @@
+.wrapper {
+	display: flex;
+	flex: 1 1 auto;
+	justify-content: center;
+	align-items: center;
+	margin: 12px 0;
+
+	>span {
+		color: #8e8e93;
+		margin-left: 12px;
+		font-size: 14px;
+	}
+}

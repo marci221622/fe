@@ -1,0 +1,1 @@
+export { useDefinePageTitle } from './useDefinePageTitle';

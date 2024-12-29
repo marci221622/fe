@@ -1,0 +1,57 @@
+@import '@/ui/themes/config.scss';
+
+.btn {
+	background-color: transparent;
+
+	width: 56px;
+	height: 56px;
+	background-color: $primary-color;
+	border-radius: 6px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: $z-minor + 1;
+	bottom: 24px;
+	right: 16px;
+	cursor: pointer;
+	transform: translateY(100px);
+	transition: transform $defaultTransitionMs ease;
+
+	.arrowIcon {
+		pointer-events: none;
+		display: none;
+	}
+
+	@include desktop() {
+		display: flex;
+		pointer-events: initial;
+		right: 46px;
+
+		&.stucked {
+			transform: translateY(0);
+		}
+
+		.arrowIcon {
+			display: initial;
+			color: #fff;
+			transform: rotate(270deg);
+		}
+	}
+}
+
+.aboveFooterWrapper {
+	@include desktop() {
+		position: relative;
+		top: -362px;
+		float: right;
+		height: 0;
+		z-index: $z-minor;
+	}
+}
+
+.aboveFooterContent {
+	@include desktop() {
+		position: relative;
+	}
+}

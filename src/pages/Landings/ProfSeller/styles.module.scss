@@ -1,0 +1,30 @@
+@import '@/ui/themes/config';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -16px;
+  margin-right: -16px;
+
+  &.appIsShort {
+    padding-top: 20px;
+  }
+}
+
+.dividerClassName {
+  font-size: 13px;
+  @include desktop() {
+    font-size: 15px;
+  }
+}
+
+.answerClassName {
+  font-size: 13px;
+}
+
+.faqLayout {
+  padding: 0 16px;
+  margin-bottom: 48px;
+}

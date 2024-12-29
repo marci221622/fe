@@ -1,0 +1,324 @@
+@import "@/ui/themes/config.scss";
+
+$suffixGap: 36px;
+
+.field {
+	width: 100%;
+	position: relative;
+	display: flex;
+
+	&.disabled {
+
+		textarea,
+		input {
+			cursor: not-allowed;
+		}
+	}
+
+	textarea {
+		resize: none;
+
+		&.isArea {
+			min-height: $areaHeight;
+		}
+	}
+
+	.stub {
+		cursor: pointer;
+		max-height: 100%;
+		min-height: $inputHeight;
+		display: flex;
+		align-items: center;
+
+		word-wrap: break-word;
+		white-space: nowrap;
+		overflow: hidden;
+
+		.placeholder {
+			color: $text-color-primary;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+
+			&.noValue {
+				opacity: 0.6;
+			}
+		}
+
+		&.stubDisabled {
+			opacity: 0.6;
+			cursor: not-allowed;
+		}
+
+
+		&.isArea {
+			@include mobile() {
+				white-space: normal;
+				overflow: auto;
+
+				.placeholder {
+					overflow: auto;
+					white-space: normal;
+				}
+			}
+
+			@include desktop() {
+				display: flex;
+				align-items: center;
+				height: $areaHeight;
+
+				.placeholder {
+					text-overflow: ellipsis;
+					overflow: hidden;
+					display: -webkit-box !important;
+					-webkit-line-clamp: 2;
+					-webkit-box-orient: vertical;
+					white-space: normal;
+				}
+
+				&.oneLine {
+					height: $inputHeight;
+
+					.placeholder {
+						text-overflow: ellipsis;
+						overflow: hidden;
+						display: -webkit-box !important;
+						-webkit-line-clamp: 1;
+						-webkit-box-orient: vertical;
+						white-space: normal;
+					}
+				}
+			}
+		}
+	}
+
+	&.bordered {
+		padding: 16px;
+		border-radius: 16px;
+		border: 1px solid $higlight-color;
+	}
+
+	span {
+		position: absolute;
+		left: 11px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+		&.suffix {
+			width: 24px;
+			display: flex;
+			right: 17px;
+			left: auto;
+			top: 0px;
+			cursor: pointer;
+			justify-content: center;
+		}
+
+		svg {
+			fill: $secondary-neutral-color;
+			opacity: 0.6;
+		}
+	}
+
+	input,
+	textarea,
+	.stub {
+		width: 100%;
+		border-radius: 10px;
+		background-color: $higlight-color;
+		padding: 9.5px 8px;
+		color: $secondary-neutral-color;
+		font-family: 'Geometria';
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 150%;
+	}
+
+	input {
+		height: $inputHeight;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	textarea {
+		min-height: $inputHeight;
+	}
+
+	&.outline {
+
+		input,
+		textarea,
+		.stub {
+			background-color: transparent;
+			color: $primary-color
+		}
+
+		svg {
+			opacity: 1;
+		}
+	}
+
+	&.withShadow {
+
+		input,
+		textarea,
+		.stub {
+			box-shadow: inset 0px 1px 2px #E2DFEA
+		}
+	}
+
+	&.hasPrefix {
+
+		input,
+		textarea,
+		.stub {
+			padding-left: 50px;
+		}
+
+		&.bordered {
+			span {
+				left: calc(17px + 16px);
+				transform: translateY(-15px);
+
+				&.suffix {
+					right: calc(11px + 16px);
+					transform: translateY(-15px);
+				}
+			}
+		}
+	}
+
+	&.isTextablePrefix {
+
+		input,
+		textarea,
+		.stub {
+			padding-left: 36px;
+		}
+
+		span p {
+			color: $secondary-neutral-color;
+			opacity: 0.6;
+		}
+	}
+
+	&.hasSuffix {
+
+		&:not(.closable) {
+
+			input,
+			textarea,
+			.stub {
+				padding-right: $suffixGap;
+			}
+		}
+
+		&.bordered {
+			span {
+				right: calc(11px + 16px);
+			}
+		}
+	}
+
+	&.closable {
+		.closeIcon {
+			opacity: 0;
+		}
+
+		input:focus,
+		textarea:focus,
+		.stub {
+			padding-right: $suffixGap;
+
+			+.closeIcon {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.simple {
+		background-color: #fff;
+
+		input,
+		textarea,
+		.stub {
+			color: $text-color-primary;
+			background-color: #fff;
+			border-radius: 0;
+			border-bottom: 1px solid $higlight-color;
+			box-shadow: none;
+		}
+
+		svg {
+			opacity: 1;
+		}
+
+		.stub,
+		input {
+			height: $simpleInputHeight;
+		}
+
+		textarea {
+			min-height: $simpleInputHeight;
+		}
+
+		span:not(.suffix) {
+			left: 0px;
+		}
+
+		&.hasPrefix {
+			padding-left: 35px;
+
+			input,
+			textarea,
+			.stub {
+				padding-left: 0px;
+			}
+		}
+	}
+
+	&.dark {
+		background-color: $primary-color;
+
+		input,
+		textarea,
+		.stub {
+			background-color: $primary-color;
+			color: #fff;
+			border: 1px solid #fff;
+		}
+	}
+}
+
+.fieldWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 100%;
+
+	&.hasError {
+		.suffix {
+			svg:global(.ExeptionIcon) {
+				color: $error-color;
+				opacity: 0.6;
+			}
+		}
+
+		&.dark {
+			.suffix {
+				svg:global(.ExeptionIcon) {
+					color: #fff;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	p {
+		@include desktop() {
+			font-weight: 500;
+			font-size: 14px;
+		}
+	}
+}

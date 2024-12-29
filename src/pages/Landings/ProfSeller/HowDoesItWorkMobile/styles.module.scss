@@ -1,0 +1,69 @@
+@import '@/ui/themes/config.scss';
+
+.howDoesItWork {
+  color: #1b1b1b;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  @include title();
+  text-align: center;
+  font-size: 19px;
+  padding: 13px 0 10px 0;
+  margin-bottom: 34px;
+}
+
+.subtitle {
+  @include caption(small, medium);
+  margin-bottom: 4px;
+}
+
+.description {
+  text-align: center;
+  padding: 0 16px;
+  font-size: 13px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.number {
+  @include title();
+  font-size: 19px;
+  margin-top: 8px;
+  padding: 8px 16px;
+  position: relative;
+}
+
+.plate {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.separator {
+  width: 2px;
+  height: 64px;
+  background: #f94f0d;
+  margin: 16px auto;
+  border-radius: 14px;
+}
+
+.linkWrapper {
+  width: calc(100% - 32px);
+}
+
+.button {
+  background: #f94f0d;
+  color: #ffffff;
+  width: 100%;
+}

@@ -1,0 +1,44 @@
+@import "@/ui/themes/config.scss";
+
+
+.disclamer {
+	@include caption();
+	padding: 8px 32px;
+	border-radius: 6px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 6px;
+	font-size: 12px;
+
+	p {
+		font-size: 12px;
+	}
+
+	&.stretch {
+		width: 100%;
+	}
+
+	&.dark {
+		background-color: $extrahighlight-color;
+	}
+
+	&.danger {
+		background-color: $extrahighlight-color;
+		color: $error-color;
+	}
+
+	&.primary {
+		border: 1px solid $higlight-color;
+	}
+
+	&.hasRightIcon {
+		padding-right: 16px;
+	}
+
+	@include desktop() {
+		padding: 9px 32px;
+	}
+}

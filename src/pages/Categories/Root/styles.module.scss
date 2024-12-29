@@ -1,0 +1,165 @@
+@import '@/ui/themes/config.scss';
+
+.wrapper {
+	margin-left: -16px;
+	margin-right: -16px;
+	gap: 0 !important;
+}
+
+.categories {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-left: -16px;
+	margin-right: -16px;
+	align-self: center;
+
+	li {
+		position: relative;
+
+		p {
+			@include title();
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			text-transform: uppercase;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.genderActions {
+	width: 100%;
+	padding: 0px 16px;
+	padding-top: 8px;
+
+	&.appIsShort {
+		top: 0px;
+	}
+
+	@include desktop() {
+		display: none;
+	}
+}
+
+.actionsClassname {
+	margin-bottom: 0px;
+}
+
+.title {
+	align-self: center;
+	margin-bottom: 6px;
+	padding: 12px 0px;
+}
+
+.desktop {
+	.title {
+		@include title();
+		font-size: 27px;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.list {
+		position: relative;
+	}
+
+	.action {
+		align-self: center;
+		margin-top: 16px;
+
+		button {
+			padding-left: 72px;
+			padding-right: 72px;
+		}
+	}
+}
+
+.carousel {
+	.categoryItems {
+		width: 100%;
+		margin-bottom: 68px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		:global(.swiper) {
+			max-width: 984px;
+		}
+
+		:global(.swiper-slide) {
+			display: flex;
+			justify-content: center;
+			width: 184px;
+			margin-right: 16px;
+			height: auto;
+		}
+
+		:global(.swiper-button-prev) {
+			left: 0px
+		}
+
+		:global(.swiper-button-next) {
+			right: 0px
+		}
+
+		:global(.swiper-pagination) {
+			position: relative;
+			order: 2;
+			bottom: 0px;
+			margin-top: 8px;
+
+			:global(.swiper-pagination-bullet-active) {
+				opacity: 1 !important;
+			}
+
+			:global(.swiper-pagination-bullet) {
+				background: #444;
+				opacity: .47;
+				width: 6px;
+				height: 6px;
+			}
+		}
+	}
+
+	.arrow {
+		width: 20px;
+		height: 22px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%) rotate(88deg);
+		left: 50px;
+		z-index: $z-minor;
+		cursor: pointer;
+
+		&:global(.swiper-button-disabled) {
+			opacity: 0.5;
+			cursor: not-allowed
+		}
+
+		&.right {
+			left: auto;
+			right: 50px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			left: -16px;
+
+			&.right {
+				right: -16px;
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+@import "@/ui/themes/config.scss";
+
+
+.search {
+	margin-bottom: 8px;
+	flex: 1;
+	max-width: none;
+}
+
+.actions {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height: 48px;
+
+	a {
+		flex: 1
+	}
+
+	img {
+		background-color: $services-gray;
+	}
+}
+
+.header {
+	position: sticky;
+	padding-top: 8px;
+	background-color: #fff;
+	z-index: $z-minor;
+	flex: 1;
+	transition: top $defaultTransitionMs ease;
+	margin-bottom: 8px;
+
+	&.largeBottomMargin {
+		margin-bottom: 14px;
+	}
+
+	@include desktop() {
+		display: none;
+	}
+}
+
+.overlay {
+	background: #fff;
+	cursor: pointer;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	transition: opacity .3s 0s;
+	opacity: 1;
+	visibility: visible;
+	width: 100%;
+	will-change: opacity;
+	z-index: -1;
+}

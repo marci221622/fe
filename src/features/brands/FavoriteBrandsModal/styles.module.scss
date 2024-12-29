@@ -1,0 +1,55 @@
+@import '@/ui/themes/config.scss';
+
+.body {
+  max-height: 80vh;
+  height: 100vh;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+}
+
+.container {
+  min-width: 800px;
+}
+
+.wrapper {}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+  z-index: $z-minor;
+  background-color: #fff;
+  flex-direction: column;
+
+  .selected {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100px;
+    overflow: auto;
+    gap: 8px
+  }
+
+  .input {
+    max-width: inherit;
+  }
+}
+
+.footer {
+  display: flex;
+  padding: 8px;
+  padding-bottom: 0px;
+  justify-content: center;
+  position: sticky;
+  bottom: 0px;
+  background-color: #fff;
+  width: 100%;
+  margin-top: auto;
+
+  button {
+    max-width: 368px;
+  }
+}

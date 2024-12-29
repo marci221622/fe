@@ -1,0 +1,83 @@
+@import '@/ui/themes/config.scss';
+
+.howDoesItWork {
+  color: #1b1b1b;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.title {
+  @include title();
+  text-align: center;
+  font-size: 27px;
+  padding: 13px 0 10px 0;
+  margin-bottom: 32px;
+}
+
+.subtitle {
+  @include caption(large, medium);
+  margin-bottom: 16px;
+}
+
+.description {
+  text-align: center;
+  padding: 0 16px;
+  font-size: 13px;
+  max-width: 268px;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.number,
+.firstNumber,
+.lastNumber {
+  @include title();
+  font-size: 19px;
+  margin: 0 8px 16px 0;
+  padding: 8px 16px;
+  position: relative;
+}
+
+.number::after,
+.firstNumber::after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 130px;
+  height: 2px;
+  background: #f94f0d;
+  top: 50%;
+  left: 106%;
+}
+
+.number::before,
+.lastNumber::before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  width: 128px;
+  height: 2px;
+  background: #f94f0d;
+  top: 50%;
+  right: 106%;
+}
+
+.plate {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 300px;
+}
+
+.button {
+  background: #f94f0d;
+  color: #ffffff;
+  width: 352px;
+}

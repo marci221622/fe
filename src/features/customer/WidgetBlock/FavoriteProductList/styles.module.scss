@@ -1,0 +1,46 @@
+@import '@/ui/themes/config.scss';
+
+.item {
+	border: 1px solid $services-gray;
+	border-radius: 16px;
+	padding: 16px;
+	padding-top: 20px;
+	padding-bottom: 8px;
+	display: flex;
+	flex-direction: column;
+	min-width: 100%;
+	position: relative;
+	background-color: #fff;
+	flex: 1 1 auto;
+}
+
+.title {
+	@include caption();
+	font-weight: bold;
+	font-size: 14px;
+	align-self: flex-start;
+}
+
+.info {
+	margin-left: 22px;
+}
+
+.products {
+	display: flex;
+	@include hide-scroll();
+	flex-wrap: nowrap;
+	overflow: auto;
+	gap: 8px;
+	width: 100%;
+	margin-top: auto;
+
+	.produtImage {
+		width: 68px;
+		height: 104px;
+		object-fit: contain;
+	}
+}
+
+.imageContainer {
+	position: relative;
+}

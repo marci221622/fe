@@ -1,0 +1,16 @@
+@import '@/ui/themes/config.scss';
+
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50% - 2px));
+  left: 16px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  z-index: $z-critical;
+}
+
+.backBtn {
+  transform: translateY(calc(-50% - 2px)) rotate(180deg);
+}

@@ -1,0 +1,126 @@
+@import "@/ui/themes/config.scss";
+
+.banner {
+  position: relative;
+
+  img {
+    user-select: none;
+    pointer-events: none;
+    object-fit: contain;
+  }
+
+  @include desktop() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.hasArrows {
+      padding: 0px $carouselArrowSize;
+    }
+  }
+}
+
+.banners {
+  display: flex;
+  gap: 22px;
+  flex-direction: column;
+  margin-left: -16px;
+  margin-right: -16px;
+
+  @include desktop() {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.carousel {
+  .banner {
+    width: 100%;
+    margin-bottom: 5px;
+
+    a {
+      display: flex;
+      max-width: 100%;
+      justify-content: center;
+    }
+
+    :global(.swiper-wrapper),
+    :global(.swiper) {
+      width: 100%;
+    }
+
+    :global(.swiper-slide) {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+
+    :global(.swiper-button-lock) {
+      display: none;
+    }
+
+    :global(.swiper-button-next),
+    :global(.swiper-button-prev) {
+      display: none;
+    }
+
+    :global(.swiper-pagination) {
+      position: relative;
+      bottom: 0px;
+      margin-top: 8px;
+
+      @include desktop() {
+        display: none;
+      }
+
+      :global(.swiper-pagination-bullet-active) {
+        opacity: 1 !important;
+      }
+
+      :global(.swiper-pagination-bullet) {
+        background: #444;
+        opacity: .47;
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+}
+
+.title {
+  @include title();
+  font-weight: 400;
+  font-size: 17px;
+  text-transform: uppercase;
+  overflow: hidden;
+  color: $secondary-color;
+
+  @include desktop() {
+    font-size: 27px;
+  }
+}
+
+.imagesWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 100%;
+
+  .productImage {
+    width: 167.5px;
+    height: 206px;
+    max-width: 100%;
+
+    @include desktop() {
+      width: 238px;
+      height: 290px;
+    }
+  }
+}

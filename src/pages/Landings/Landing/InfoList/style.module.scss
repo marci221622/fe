@@ -1,0 +1,24 @@
+.infoList {
+  font-size: 13px;
+  line-height: 1.5;
+
+  li {
+    display: flex;
+    margin-bottom: 16px;
+  }
+}
+
+.infoItemIcon {
+  align-self: center;
+  flex: 0 0 auto;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+
+  // TODO: индивидуальный сайзинг SVG через data
+  svg {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+}

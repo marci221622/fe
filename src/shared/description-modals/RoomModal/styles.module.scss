@@ -1,0 +1,78 @@
+@import '@/ui/themes/config.scss';
+
+.showRoomModalWrapper {
+	position: relative;
+	margin-bottom: 12px;
+
+	@include desktop() {
+		display: block;
+		padding: 0px 40px;
+	}
+}
+
+.modalContainer {
+	@include desktop() {
+		min-width: 584px;
+	}
+}
+
+.body {
+	:global(.swiper-button-lock) {
+		display: none;
+	}
+
+	:global(.swiper-button-next),
+	:global(.swiper-button-prev) {
+		display: none;
+	}
+
+	:global(.swiper-pagination) {
+		position: relative;
+		bottom: 0px !important;
+
+		:global(.swiper-pagination-bullet-active) {
+			opacity: 1 !important;
+		}
+
+		:global(.swiper-pagination-bullet) {
+			background: #444;
+			opacity: .47;
+			width: 6px;
+			height: 6px;
+		}
+	}
+}
+
+.slide {
+	img {
+		max-width: 100%;
+		border-radius: 12px;
+		width: 100%;
+
+		@include desktop() {
+			object-fit: contain;
+		}
+	}
+}
+
+.title {
+	@include caption("medium");
+	font-weight: bold;
+	margin-bottom: 4px
+}
+
+.description {
+	@include caption("small");
+	white-space: pre-wrap;
+}
+
+.addressWrapper {
+	display: flex;
+	padding: 8px 0px;
+	gap: 16px;
+	align-items: center;
+}
+
+.roomAdditionalAddress {
+	padding-left: 40px;
+}

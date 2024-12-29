@@ -1,0 +1,42 @@
+@use "sass:map";
+
+@import "./varriables.scss";
+
+$sizes: (
+	minimal: 12px,
+	small: 13px,
+	medium: 14px,
+	large: 15px
+);
+
+$weights: (
+	normal: 400,
+	medium: 500,
+	bold: 700
+);
+
+@mixin caption($size: "large", $weight: "normal") {
+	font-family: 'Geometria';
+	font-style: normal;
+	font-size: map.get($sizes, $size);
+	font-weight: map.get($weights, $weight);
+	line-height: 150%;
+	color: $text-color-primary;
+	letter-spacing: normal;
+}
+
+@mixin title {
+	font-family: 'TSUM Lenta';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 120%;
+	color: $text-color-primary;
+	letter-spacing: 1.2px;
+}
+
+@mixin textEllipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-width: 100%;
+}

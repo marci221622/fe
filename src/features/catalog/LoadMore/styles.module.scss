@@ -1,0 +1,32 @@
+@import "@/ui/themes/config.scss";
+
+
+.pagination {
+	display: none;
+	grid-area: pagination;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 32px;
+
+	@include desktop() {
+		display: flex;
+	}
+
+	.loadMore {
+		padding: 15px 72px;
+		border: 1px solid $primary-color;
+		border-radius: 6px;
+		font-family: 'Geometria';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 150%;
+		cursor: pointer;
+	}
+}
+
+.loadMoreSpinner {
+	margin: 0 auto;
+	margin-top: 16px;
+}

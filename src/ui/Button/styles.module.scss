@@ -1,0 +1,117 @@
+@import '@/ui/themes/config.scss';
+
+.container {
+  min-width: 83px;
+  width: 100%;
+}
+
+.btn {
+  padding: 0px 8px;
+  color: #fff;
+  background-color: $primary-color;
+  border-radius: 6px;
+  font-family: 'Geometria';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  border: 0 solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  &.L {
+    min-height: 50px;
+    font-size: 15px;
+    font-weight: 500;
+
+    @include desktop() {
+      font-size: 17px;
+    }
+  }
+
+  &.M {
+    min-height: 40px;
+    font-size: 13px;
+    font-weight: 500;
+
+    @include desktop() {
+      font-size: 15px;
+    }
+  }
+
+  &.S {
+    min-height: 36px;
+    font-size: 13px;
+
+    @include desktop() {
+      font-size: 15px;
+    }
+  }
+
+  &.XS {
+    min-height: 26px;
+    font-size: 12px;
+    border-radius: 3px;
+
+    @include desktop() {
+      font-size: 13px;
+    }
+  }
+
+  &.asText {
+    min-height: auto;
+  }
+
+  &.stretch {
+    width: 100%;
+  }
+
+  &.reverse {
+    background-color: #fff;
+    color: $text-color-primary;
+    border: 1px solid $primary-color;
+  }
+
+  &.colored {
+    background-color: $secondary-color;
+  }
+
+  &.bold {
+    font-weight: 500;
+  }
+
+  &.disabled {
+    opacity: 0.24;
+    cursor: not-allowed;
+  }
+
+  &.outline {
+    background-color: #fff;
+    color: $text-color-primary;
+    border-color: transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  svg {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &.withVisibleTransition {
+    visibility: hidden;
+    opacity: 0;
+    transition: all $defaultTransitionMs ease;
+
+    &.visibled {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+@import '@/ui/themes/config.scss';
+
+@mixin maxWidth {
+  width: 100%;
+  max-width: $max-width-desktop;
+  margin: 0 auto;
+}
+
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto 1fr auto auto;
+  grid-template-columns: 100%;
+  gap: 0px 0px;
+  grid-template-areas:
+    'installApp'
+    'banner'
+    'header'
+    'content'
+    'footer'
+    'mobileNav';
+}
+
+.mobileNavGap {
+  padding-bottom: $mobileNavHeight;
+  @include desktop() {
+    padding-bottom: 0;
+  }
+}
+
+.header {
+  grid-area: header;
+  position: sticky;
+  top: 0px;
+  z-index: $z-regular;
+  background-color: #fff;
+
+  @include desktop() {
+    position: relative;
+  }
+}
+
+.content {
+  @include maxWidth();
+  @include templatePaddings();
+  grid-area: content;
+  padding: 0 16px;
+
+  @include desktop() {
+    position: relative;
+  }
+}
+
+.footer {
+  grid-area: footer;
+  background-color: $primary-color;
+  margin-top: 32px;
+  position: relative;
+  z-index: $z-minor + 1;
+
+  @include desktop() {
+    margin-top: 64px;
+  }
+
+  > div:first-child {
+    @include maxWidth();
+  }
+}
+
+.banner {
+  grid-area: banner;
+}
+
+.installApp {
+  grid-area: installApp;
+}

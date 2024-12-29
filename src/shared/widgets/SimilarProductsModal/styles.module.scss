@@ -1,0 +1,32 @@
+@import '@/ui/themes/config.scss';
+
+.SimilarProductsModal {
+  width: fit-content;
+  max-height: 800px;
+  min-width: 816px;
+  min-height: 446px;
+  overflow-y: scroll;
+  border-radius: 16px;
+  padding-bottom: 8px;
+}
+
+.body {
+  padding: 0px 8px 8px 8px;
+  max-height: 100%;
+  overflow-y: auto;
+  min-height: 446px;
+}
+
+.title {
+  font-size: 19px;
+}
+
+.icon {
+  left: 24px;
+}
+
+.header {
+  padding: 16px 40px;
+}
+
+.loader {}

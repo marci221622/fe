@@ -1,0 +1,59 @@
+@import "@/ui/themes/config.scss";
+
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 16px;
+
+  @include desktop() {
+    margin-bottom: 24px;
+  }
+}
+
+.bannerImageWrapper {
+  display: flex;
+  background: #fff;
+  border-radius: 16px;
+
+  picture {
+    display: flex;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.pageDescription {
+  margin-bottom: 27px;
+  text-align: center;
+
+  @include desktop() {
+    margin-bottom: 34px;
+  }
+
+  h1,
+  p {
+    @include caption('small');
+    display: inline;
+
+    @include desktop() {
+      display: block;
+      @include caption();
+    }
+  }
+}
+
+.navigationDisabled {
+  margin-top: 16px;
+}
+
+.faqTitle {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font-size: 25px;
+}

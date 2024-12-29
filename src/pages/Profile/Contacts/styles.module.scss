@@ -1,0 +1,47 @@
+@import '@/ui/themes/config.scss';
+
+.actions {
+	margin-top: 32px;
+}
+
+.pageTitle {
+	margin-bottom: 0;
+}
+
+.header {
+	justify-content: center;
+	position: relative;
+	align-items: center;
+	margin-bottom: 20px;
+	min-height: 24px;
+
+	@include desktop() {
+		min-height: auto;
+	}
+
+	svg {
+		transform: rotate(180deg);
+		position: absolute;
+		left: 10px;
+		display: block;
+		cursor: pointer;
+		top: 0px;
+
+		@include desktop() {
+			display: none;
+		}
+	}
+}
+
+.row {
+	width: 100%;
+	gap: 32px !important
+}
+
+.space {
+	gap: 15px !important;
+
+	@include desktop() {
+		gap: 32px !important
+	}
+}
